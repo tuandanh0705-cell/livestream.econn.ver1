@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>META ECOM | Dịch Vụ Livestream Sản Xuất Chuyên Nghiệp (Bản Nền Sáng)</title>
+  <meta name="description" content="META ECOM cung cấp giải pháp sản xuất Livestream TikTok Shop, Shopee Live chuyên nghiệp trọn gói. Hệ thống máy quay 4K, Studio hiện đại & đội ngũ vận hành 500+ phiên live thành công.">
+  <meta name="keywords" content="dịch vụ livestream, livestream tiktok shop, shopee live, sản xuất livestream chuyên nghiệp, setup studio livestream, META ECOM">
+  
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="META ECOM | Dịch Vụ Livestream Sản Xuất Chuyên Nghiệp">
+  <meta property="og:description" content="Giải pháp vận hành Livestream E-commerce toàn diện. Đặt lịch tư vấn chiến lược 30' miễn phí!">
+  <meta property="og:image" content="images/studio_setup.jpeg">
+  
+  <!-- TRACKING & ANALYTICS INTEGRATION (Meta Pixel & GA4) -->
+  <!-- Meta Pixel Code -->
+  <script>
+    window.META_PIXEL_ID = 'YOUR_PIXEL_ID'; // Thay 'YOUR_PIXEL_ID' bằng mã Pixel thực tế
+    if (window.META_PIXEL_ID && window.META_PIXEL_ID !== 'YOUR_PIXEL_ID') {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', window.META_PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+  </script>
+  <!-- Google Analytics 4 (GA4) -->
+  <script>
+    window.GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Thay 'G-XXXXXXXXXX' bằng Mã đo lường GA4 thực tế
+    if (window.GA_MEASUREMENT_ID && window.GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', window.GA_MEASUREMENT_ID);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* --- FLOATING CSKH WIDGET --- */
+    .floating-widget {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .float-btn {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 13px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .float-phone {
+      background: #22c55e;
+      animation: pulse-green 2s infinite;
+    }
+
+    .float-zalo {
+      background: #0068ff;
+      animation: pulse-blue 2s infinite 0.5s;
+    }
+
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+
+    @keyframes pulse-blue {
+      0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(0, 104, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); }
+    }
+    :root {
+      /* Palette (Lemon Digital / Dark Space style) */
+      --c-bg: #0a0a0a;
+      --c-accent: #f5b015; 
+      --c-accent-hover: #e09e0d;
+      --c-text-main: #ffffff;
+      --c-text-muted: #a1a1aa; /* Zinc 400 */
+      --c-border: rgba(255, 255, 255, 0.1);
+      --c-glass: rgba(15, 15, 15, 0.6);
+      
+      --font-display: 'Roboto', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--c-bg);
+      color: var(--c-text-main);
+      overflow-x: hidden;
+      /* Background Glow */
+      background-image: 
+        radial-gradient(circle at 50% -20%, rgba(245, 176, 21, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 100% 50%, rgba(245, 176, 21, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(255, 255, 255, 0.02) 0%, transparent 30%);
+      background-attachment: fixed;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* --- TOP NAV (FIXED GLASSMORPHISM) --- */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 48px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    
+    .logo:hover {
+      opacity: 0.9;
+    }
+
+    .logo-icon-img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 240, 180, 0.3));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links a {
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--c-accent);
+    }
+
+    .nav-btn {
+      background: var(--c-accent);
+      color: #000;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border-radius: 100px;
+      transition: all 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: var(--c-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* --- CONTAINERS & SECTIONS --- */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--c-accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 130px; /* Offset nav */
+      padding-bottom: 24px;
+    }
+
+    .hero-container {
+      border: 1px solid var(--c-border);
+      border-radius: 36px;
+      padding: 72px 56px;
+      text-align: center;
+      max-width: 1140px;
+      width: 100%;
+      background: var(--c-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: var(--c-accent);
+    }
+
+    .hero-h1-top {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.5vw, 44px);
+      font-weight: 700;
+      margin-bottom: 14px;
+      line-height: 1.25;
+      letter-spacing: 1.5px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .hero-h1-bottom {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 6.5vw, 86px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+      background: linear-gradient(180deg, #FFFFFF 20%, rgba(255, 255, 255, 0.85) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 10px 25px rgba(245, 176, 21, 0.25));
+    }
+
+    .hero-lede {
+      font-size: 18px;
+      color: var(--c-text-muted);
+      max-width: 820px;
+      margin: 0 auto 40px;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-pill {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 18px 40px;
+      border-radius: 100px;
+      transition: all 0.3s;
+    }
+
+    .btn-pill:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-pill-primary {
+      background: var(--c-accent);
+      color: #000;
+      box-shadow: 0 10px 20px rgba(245, 176, 21, 0.2);
+    }
+
+    .btn-pill-secondary {
+      background: #111;
+      color: #fff;
+      border: 1px solid var(--c-border);
+    }
+    
+    .btn-pill-secondary:hover {
+      background: #222;
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    .partner-logos {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin-top: 60px;
+      opacity: 0.5;
+    }
+
+    .partner-logos div {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: lowercase;
+    }
+
+    /* --- BENTO GRID (PAIN POINTS) --- */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .bento-card {
+      background: var(--c-glass);
+      border: 1px solid var(--c-border);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .bento-card:hover {
+      border-color: rgba(245, 176, 21, 0.5);
+      transform: translateY(-5px);
+    }
+
+    .bento-card h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .bento-card p {
+      color: var(--c-text-muted);
+      font-size: 16px;
+    }
+    
+    .bento-large {
+      grid-column: span 2;
+      background: linear-gradient(135deg, rgba(245, 176, 21, 0.1) 0%, var(--c-glass) 100%);
+      border-color: rgba(245, 176, 21, 0.3);
+    }
+
+    /* --- SERVICES ROW --- */
+    .service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .service-row {
+      background: var(--c-glass);
+      border: 1px solid var(--c-border);
+      border-radius: 24px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 80px 1fr 1.5fr;
+      align-items: center;
+      gap: 32px;
+      transition: all 0.3s;
+    }
+
+    .service-row:hover {
+      background: rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .srv-num {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--c-accent);
+    }
+
+    .srv-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .srv-desc {
+      color: var(--c-text-muted);
+      font-size: 16px;
+    }
+
+    /* --- PRICING --- */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .price-card {
+      background: var(--c-glass);
+      border: 1px solid var(--c-border);
+      border-radius: 32px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .price-card.recommended {
+      border-color: var(--c-accent);
+      background: linear-gradient(180deg, rgba(245, 176, 21, 0.05) 0%, rgba(15,15,15,0.6) 100%);
+    }
+
+    .rec-badge {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--c-accent);
+      color: #000;
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      letter-spacing: 1px;
+    }
+
+    .price-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .price-sub {
+      color: var(--c-text-muted);
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+
+    .price-val {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 32px;
+      color: var(--c-accent);
+    }
+
+    .price-val span {
+      font-size: 16px;
+      color: var(--c-text-muted);
+      font-weight: 500;
+    }
+
+    .feature-list {
+      list-style: none;
+      flex: 1;
+      margin-bottom: 40px;
+    }
+
+    .feature-list li {
+      padding: 12px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.1);
+      font-size: 15px;
+      color: var(--c-text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .feature-list li b {
+      color: #fff;
+    }
+
+    .check-icon {
+      color: var(--c-accent);
+      font-weight: bold;
+    }
+
+    .btn-full {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* --- CONTACT FORM --- */
+    .contact-box {
+      background: var(--c-glass);
+      border: 1px solid var(--c-border);
+      border-radius: 40px;
+      padding: 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      backdrop-filter: blur(12px);
+    }
+
+    .contact-info h2 {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--c-text-muted);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-input {
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      padding: 16px;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--c-accent);
+    }
+
+    /* --- FOOTER --- */
+    .footer {
+      padding: 60px 24px;
+      text-align: center;
+      border-top: 1px solid var(--c-border);
+      margin-top: 60px;
+      font-size: 14px;
+      color: var(--c-text-muted);
+    }
+
+    /* --- RESPONSIVE OPTIMIZATIONS (TABLET & MOBILE) --- */
+    @media (max-width: 992px) {
+      .header { padding: 14px 20px; }
+      .nav-btn { padding: 10px 18px; font-size: 12px; }
+      .hero { padding-top: 115px; }
+      .hero-container { padding: 44px 24px; border-radius: 28px; }
+      .hero-h1-top { font-size: clamp(24px, 5vw, 36px); }
+      .hero-h1-bottom { font-size: clamp(40px, 9vw, 64px); }
+      .hero-lede { font-size: 16px; margin-bottom: 28px; }
+      .bento-grid, .service-row, .pricing-grid, .contact-box { grid-template-columns: 1fr; }
+      .bento-large { grid-column: 1; }
+      .service-row { gap: 16px; padding: 24px; }
+      .srv-num { font-size: 20px; }
+      .srv-title { font-size: 22px; }
+      .nav-links { display: none; }
+      .contact-box { padding: 32px 24px; gap: 32px; border-radius: 28px; }
+      .price-card { padding: 32px 24px; border-radius: 24px; }
+      .section { padding: 50px 0; }
+    }
+
+    @media (max-width: 640px) {
+      .header { padding: 12px 16px; }
+      .logo { font-size: 16px; gap: 8px; }
+      .logo-icon { width: 26px; height: 26px; }
+      .nav-btn { padding: 8px 14px; font-size: 11px; }
+      
+      /* ✅ FIX 1: Tăng padding-top cho .hero để section 1 không bị header đè lên */
+      .hero { padding-top: 110px; padding-bottom: 32px; }
+      .hero-container { padding: 32px 20px; border-radius: 24px; margin-top: 6px; }
+      .hero-eyebrow { font-size: 12px; letter-spacing: 2px; margin-bottom: 16px; }
+      .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
+      .btn-pill { width: 100%; text-align: center; padding: 14px 20px; font-size: 15px; }
+      
+      /* ✅ FIX 2: Tăng padding lề mobile, chữ vừa vặn không bị sát viền */
+      .container { padding: 0 20px; }
+      .section { padding: 40px 0; }
+      
+      /* Điều chỉnh font chữ văn bản mobile thoáng và vừa mắt hơn */
+      p[style*="font-size: 17px"],
+      p[style*="font-size:17px"],
+      div[style*="font-size: 17px"] {
+        font-size: 15.5px !important;
+        line-height: 1.75 !important;
+      }
+      
+      .contact-info h2 { font-size: 28px; }
+      .contact-box { padding: 28px 20px; }
+      .price-card { padding: 28px 20px; }
+      .price-val { font-size: 38px; }
+      
+      .bento-card { padding: 24px 20px; }
+      .service-row { padding: 20px; gap: 12px; }
+
+      /* ✅ FIX: ảnh thu nhỏ đều các cạnh, không crop */
+      .img-studio-intro { max-width: 100%; height: auto !important; }
+      .img-stage { max-width: 100%; height: auto !important; }
+
+      .floating-widget { bottom: 16px; right: 16px; gap: 8px; }
+      .float-btn { width: 46px; height: 46px; font-size: 11px; }
+      .mobile-swipe-hint { display: block !important; }
+    }
+
+    /* ===== THEME TOGGLE BUTTON ===== */
+    .theme-toggle-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--c-border);
+      background: var(--c-glass);
+      color: var(--c-text-main);
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      backdrop-filter: blur(8px);
+      flex-shrink: 0;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--c-accent);
+      transform: scale(1.1);
+    }
+
+    /* ===== LIGHT MODE ===== */
+    body.light-mode {
+      --c-bg: #ffffff;
+      /* META ECOM Brand Guideline */
+      --c-brand-navy: #160E44;
+      --c-accent: #F7941D;
+      --c-accent-hover: #E0820F;
+      --c-text-main: #000000;
+      --c-text-muted: #000000;
+      --c-border: rgba(0, 0, 0, 0.09);
+      --c-glass: #ffffff;
+      background-color: #ffffff;
+      background-image: none;
+    }
+
+    /* Không đổ bóng ảnh ở bản nền trắng */
+    body.light-mode img,
+    body.light-mode .cs-image-placeholder,
+    body.light-mode .vcard:hover {
+      box-shadow: none !important;
+    }
+
+    /* Chữ inline màu trắng → đổi sang đen trên nền trắng */
+    body.light-mode section [style*="color: #fff"],
+    body.light-mode footer [style*="color: #fff"] {
+      color: #111 !important;
+    }
+
+    /* Header — Navy brand #160E44, chữ trắng */
+    body.light-mode .header {
+      background: var(--c-brand-navy);
+      border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+    body.light-mode .logo { color: #ffffff; }
+    body.light-mode .nav-links a { color: #ffffff; }
+    body.light-mode .nav-links a:hover { color: var(--c-accent); }
+    body.light-mode .nav-btn {
+      background: var(--c-accent);
+      color: #ffffff;
+    }
+    body.light-mode .nav-btn:hover { background: var(--c-accent-hover); }
+
+    /* Bỏ glow quanh logo (không đổ bóng ảnh) */
+    body.light-mode .logo-icon-img,
+    body.light-mode .footer img { filter: none !important; }
+
+    /* H1 gộp 1 thẻ, hiển thị 2 dòng như cũ */
+    .hero-h1 { margin: 0; font-size: inherit; font-weight: inherit; }
+    .hero-h1 > span { display: block; }
+
+    /* Menu ☰ cho điện thoại / tablet */
+    .nav-toggle { display: none; }
+    @media (max-width: 992px) {
+      .nav-btn { margin-left: auto; }
+      .nav-toggle {
+        display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+        width: 42px; height: 42px; margin-left: 10px; flex-shrink: 0;
+        background: transparent; border: 1.5px solid rgba(255, 255, 255, 0.4); border-radius: 12px; cursor: pointer;
+      }
+      .nav-toggle span { display: block; width: 20px; height: 2px; border-radius: 2px; background: #fff; transition: transform 0.25s, opacity 0.25s; }
+      .header.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .header.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+      .header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .header.nav-open .nav-links {
+        display: flex; flex-direction: column; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--c-brand-navy, #160E44); padding: 4px 20px 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .header.nav-open .nav-links a { display: block; padding: 14px 4px; font-size: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+      .header.nav-open .nav-links li:last-child a { border-bottom: 0; }
+    }
+    @media (max-width: 420px) {
+      .nav-btn-long { display: none; }
+      .logo span { font-size: 15px; }
+      .logo-icon-img { height: 30px; }
+    }
+
+    /* Hero */
+    body.light-mode .hero-container {
+      background: #ffffff;
+      border: 2px solid var(--c-brand-navy);
+      box-shadow: none;
+    }
+    /* Logo ngang trong khung Hero */
+    .hero-logo {
+      display: block;
+      height: 72px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      margin: 0 auto 32px;
+    }
+    @media (max-width: 640px) {
+      .hero-logo { height: 48px; margin-bottom: 24px; }
+    }
+    body.light-mode .hero-h1-top { color: rgba(17, 17, 17, 0.95); }
+    body.light-mode .hero-h1-bottom {
+      background: linear-gradient(180deg, #111111 20%, rgba(40, 40, 40, 0.85) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 12px rgba(200, 148, 14, 0.2));
+    }
+    body.light-mode .hero-lede { color: #555567; }
+    body.light-mode .btn-pill-secondary {
+      background: #ffffff;
+      border-color: rgba(0,0,0,0.18);
+      color: #111;
+    }
+    body.light-mode .btn-pill-secondary:hover {
+      background: #fafafa;
+      border-color: var(--c-accent);
+    }
+    body.light-mode .partner-logos { opacity: 0.35; filter: invert(1); }
+
+    /* Cards & Sections */
+    body.light-mode .bento-card {
+      background: #ffffff;
+      border-color: rgba(0,0,0,0.08);
+    }
+    body.light-mode .bento-card:hover { border-color: rgba(201,148,14,0.5); }
+    body.light-mode .bento-large {
+      background: #ffffff;
+      border-color: rgba(245,176,21,0.25);
+    }
+    body.light-mode .bento-card h3 { color: #111; }
+
+    /* Service rows */
+    body.light-mode .service-row {
+      background: #ffffff;
+      border-color: rgba(0,0,0,0.08);
+    }
+    body.light-mode .service-row:hover {
+      background: #ffffff;
+      border-color: rgba(0,0,0,0.2);
+    }
+    body.light-mode .srv-title { color: #111; }
+
+    /* Pricing */
+    body.light-mode .price-card {
+      background: #ffffff;
+      border-color: rgba(0,0,0,0.08);
+    }
+    body.light-mode .price-card.recommended {
+      background: #ffffff;
+      border-color: var(--c-accent);
+    }
+    body.light-mode .price-title { color: #111; }
+    body.light-mode .feature-list li { color: #555567; border-bottom-color: rgba(0,0,0,0.08); }
+    body.light-mode .feature-list li b { color: #111; }
+
+    /* Table */
+    body.light-mode table { background: #ffffff; }
+    body.light-mode thead tr { background: #fbfbfb !important; }
+
+    /* Case Studies */
+    body.light-mode .cs-box {
+      background: #ffffff !important;
+      border-color: rgba(0,0,0,0.08) !important;
+    }
+    body.light-mode .cs-info { color: #111; }
+    body.light-mode .cs-text { color: #4b4b57; }
+    body.light-mode .cs-image-placeholder { border-color: rgba(0,0,0,0.08); }
+    body.light-mode .cs-badge {
+      background: #ffffff !important;
+      border-color: rgba(0,0,0,0.1) !important;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+    body.light-mode .cs-badge-title { color: #111 !important; }
+    body.light-mode .cs-badge-desc { color: #333 !important; }
+    body.light-mode .cs-nav-btn {
+      background: rgba(255,255,255,0.85);
+      border-color: rgba(0,0,0,0.2);
+      color: #111;
+    }
+
+    /* Portfolio vcards */
+    body.light-mode .vcard {
+      background: #ffffff !important;
+      border-color: rgba(0,0,0,0.08) !important;
+    }
+    body.light-mode .vcard:hover {
+      border-color: rgba(201,148,14,0.5) !important;
+    }
+    body.light-mode .vcard-title { color: #111; }
+    body.light-mode .vcard-desc { color: #555567; }
+
+    /* Contact & Form */
+    body.light-mode .contact-box {
+      background: var(--c-brand-navy, #160E44);
+      border: 2px solid var(--c-brand-navy, #160E44);
+    }
+    /* Mở rộng khung liên hệ sang 2 bên lề (đồng bộ với #thanh-cong, #du-an) */
+    #lien-he.container { max-width: 1520px; padding-left: 32px; padding-right: 32px; }
+    @media (max-width: 992px) { #lien-he.container { padding-left: 20px; padding-right: 20px; } }
+    /* Chữ trên nền navy → trắng */
+    body.light-mode #lien-he .contact-info,
+    body.light-mode #lien-he .contact-info h2,
+    body.light-mode #lien-he .form-label { color: #ffffff !important; }
+    body.light-mode #lien-he .contact-info p { color: rgba(255, 255, 255, 0.8) !important; }
+    body.light-mode .form-input {
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #111;
+    }
+    body.light-mode .form-input::placeholder { color: #8a87a3; }
+    body.light-mode .form-input:focus { border-color: var(--c-accent); box-shadow: 0 0 0 3px rgba(247, 148, 29, 0.35); }
+    body.light-mode .form-label { color: #666; }
+
+    /* Footer */
+    body.light-mode .footer {
+      border-top-color: rgba(0,0,0,0.1);
+      color: #666;
+    }
+
+    /* Section titles inline styles need override via text color */
+    body.light-mode h2[style*='color: var(--c-accent)'],
+    body.light-mode h3[style*='color: #fff'] { color: #111 !important; }
+
+    /* Modals */
+    body.light-mode #video-modal,
+    body.light-mode #success-modal {
+      background: rgba(200,200,200,0.75);
+    }
+    body.light-mode #success-modal > div {
+      background: rgba(255,255,255,0.97) !important;
+    }
+    body.light-mode #success-modal h3 { color: #111 !important; }
+    body.light-mode #success-modal p { color: #555 !important; }
+
+    /* ===== BRAND OVERRIDES: CTA cam chữ trắng, chữ nội dung màu đen ===== */
+    body.light-mode .btn-pill-primary,
+    body.light-mode .rec-badge {
+      background: var(--c-accent);
+      color: #ffffff !important;
+      box-shadow: none !important;
+    }
+    body.light-mode .btn-pill-primary:hover { background: var(--c-accent-hover); }
+    body.light-mode .vcard-avatar { color: #ffffff; }
+    body.light-mode .vcard:hover .vcard-play-btn::after {
+      border-color: transparent transparent transparent #ffffff;
+    }
+
+    body.light-mode .hero-eyebrow,
+    body.light-mode .section-eyebrow,
+    body.light-mode .hero-h1-top,
+    body.light-mode .hero-lede,
+    body.light-mode .srv-num,
+    body.light-mode .price-val span,
+    body.light-mode .feature-list li,
+    body.light-mode .cs-title,
+    body.light-mode .cs-info,
+    body.light-mode .cs-text,
+    body.light-mode .cs-quote-icon,
+    body.light-mode .cs-badge-title,
+    body.light-mode .cs-badge-desc,
+    body.light-mode .pf-title,
+    body.light-mode .pf-subtitle,
+    body.light-mode .vcard-pill,
+    body.light-mode .vcard-title,
+    body.light-mode .vcard-desc,
+    body.light-mode .form-label,
+    body.light-mode .footer,
+    body.light-mode section [style*="color: #fff"],
+    body.light-mode footer [style*="color: #fff"] {
+      color: #000000 !important;
+    }
+
+    /* Highlight nội dung → cam brand #F7941D */
+    body.light-mode main strong,
+    body.light-mode section strong,
+    body.light-mode section b,
+    body.light-mode .feature-list li b,
+    body.light-mode .price-val,
+    body.light-mode .cs-info span,
+    body.light-mode .cs-badge-val {
+      color: var(--c-accent) !important;
+    }
+
+    /* Tên gói bảng giá viết hoa */
+    body.light-mode .price-title {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    body.light-mode .hero-h1-bottom {
+      background: none;
+      -webkit-text-fill-color: #000000;
+      color: #000000;
+      filter: none;
+    }
+
+    /* Bảng dịch vụ: header navy chữ trắng, highlight cam */
+    body.light-mode #dich-vu thead tr {
+      background: var(--c-brand-navy) !important;
+    }
+    body.light-mode #dich-vu thead th {
+      color: #ffffff !important;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px;
+      border-left-color: rgba(255, 255, 255, 0.15) !important;
+    }
+    body.light-mode #dich-vu td strong {
+      color: var(--c-accent) !important;
+    }
+
+    /* ===== THU GỌN KHOẢNG CÁCH GIỮA CÁC SECTION ===== */
+    body.light-mode .section { padding: 48px 0; }
+    body.light-mode #quy-trinh > div:last-child { margin-bottom: 0 !important; }
+    body.light-mode .cs-header,
+    body.light-mode .pf-header { margin-bottom: 32px; }
+    body.light-mode .cs-slider-wrapper { padding-top: 0; padding-bottom: 0; margin-top: 0; }
+    body.light-mode .cs-slider-container { padding: 12px 0; }
+    body.light-mode .footer { margin-top: 24px; }
+    @media (max-width: 992px) {
+      body.light-mode .section { padding: 40px 0; }
+    }
+    @media (max-width: 640px) {
+      body.light-mode .section { padding: 32px 0; }
+    }
+
+    /* Scrollbar */
+    body.light-mode ::-webkit-scrollbar-track { background: #ffffff; }
+    body.light-mode ::-webkit-scrollbar-thumb { background: #bbb; }
+  </style>
+</head>
+<body class="light-mode">
+
+  <!-- TOP NAV -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="images/logo_icon.png" alt="META ECOM Logo" class="logo-icon-img">
+      <span>META ECOM</span>
+    </a>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="#gioi-thieu">Về Chúng Tôi</a></li>
+      <li><a href="#dich-vu">Dịch Vụ</a></li>
+      <li><a href="#quy-trinh">Quy Trình</a></li>
+      <li><a href="#bang-gia">Bảng Giá</a></li>
+      <li><a href="#du-an">Dự Án</a></li>
+    </ul>
+    <a href="#lien-he" class="nav-btn"><span class="nav-btn-long">Nhận </span>Tư Vấn Miễn Phí</a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="hero container">
+    <div class="hero-container">
+      <img src="images/LOGO%20META%20ECOM%20NGANG.png" alt="Logo META ECOM - Let Vietnamese E-commerce Grow" class="hero-logo" width="317" height="72">
+      
+      <h1 class="hero-h1"><span class="hero-h1-top">SẢN XUẤT LIVESTREAM</span><span class="hero-h1-bottom">CHUYÊN NGHIỆP</span></h1>
+      
+      <p class="hero-lede">Dịch vụ sản xuất Livestream bán hàng trọn gói tại Studio 4K <strong>META ECOM</strong>. Chuyên thiết lập máy quay điện ảnh, vận hành EKIP kỹ thuật đa góc máy và tối ưu chuyển đổi trên <span style="white-space: nowrap;"><strong>TikTok Shop</strong></span>, <span style="white-space: nowrap;"><strong>Shopee Live</strong></span>, <strong>Facebook</strong>.</p>
+      
+      <div class="hero-buttons">
+        <a href="#lien-he" class="btn-pill btn-pill-primary">📞 Đăng lịch 30' chiến lược Live</a>
+        <a href="#bang-gia" class="btn-pill btn-pill-secondary">Tư vấn báo giá</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- INTRO LEAD-IN & ANH 1 SECTION -->
+  <section class="container" style="padding-top: 16px; padding-bottom: 20px;">
+    <div style="width: 100%; text-align: left; font-size: 17px; line-height: 1.8; color: var(--c-text-muted); margin-bottom: 20px;">
+      Trong kỷ nguyên thương mại điện tử (E-commerce), <strong>dịch vụ sản xuất Livestream bán hàng trọn gói</strong> là chiến lược ưu tiên hàng đầu giúp các doanh nghiệp bứt phá doanh số. Việc đầu tư vào một giải pháp Livestream chuyên nghiệp, chuẩn hình ảnh 4K chính là “chìa khóa vàng” để nhãn hàng tạo nên các phiên <strong>Mega Live bùng nổ đơn hàng</strong> trên <span style="white-space: nowrap;">TikTok Shop</span>, <span style="white-space: nowrap;">Shopee Live</span> và Facebook. Hãy cùng <strong>META ECOM</strong> khám phá giải pháp tối ưu cho thương hiệu của bạn ngay dưới đây!
+    </div>
+
+    <!-- ẢNH 1.PNG THỰC TẾ CHÈN NGAY DƯỚI NỘI DUNG NÀY -->
+    <div style="width: 100%; max-width: 900px; margin: 0 auto;">
+      <div style="border-radius: 24px; overflow: hidden; border: 1px solid var(--c-border);">
+        <img src="images/anh1.png" alt="Không gian Studio Livestream META ECOM" class="img-studio-intro" style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <p style="text-align: center; color: var(--c-text-muted); font-size: 14px; margin-top: 16px; font-style: italic;">Hệ thống trang thiết bị và không gian Studio Livestream thực tế tại META ECOM.</p>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION SECTION -->
+  <section class="section container" id="gioi-thieu" style="padding-top: 24px;">
+    <div style="width: 100%; margin-bottom: 48px; text-align: left;">
+      <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); margin-bottom: 24px; font-weight: 700;">Dịch Vụ Livestream Chuyên Nghiệp Tại META ECOM</h2>
+      <p style="color: var(--c-text-muted); font-size: 17px; margin-bottom: 16px; line-height: 1.8;">Trong thời đại số, <strong>dịch vụ livestream</strong> đã trở thành công cụ không thể thiếu đối với doanh nghiệp, thương hiệu và cá nhân. Không chỉ là phương tiện truyền tải thông tin tức thời, livestream còn giúp tăng cường sự kết nối với khán giả, mở rộng tệp khách hàng và nâng cao hiệu quả bán hàng trực tiếp.</p>
+      <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8;">META ECOM tự hào là đơn vị cung cấp <strong>dịch vụ sản xuất livestream chuyên nghiệp</strong>, đáp ứng đa dạng nhu cầu từ livestream bán hàng TikTok Shop, Shopee Live cho đến setup phòng studio trọn gói. Với kinh nghiệm hàng trăm phiên live, đội ngũ kỹ thuật viên chuyên môn cao và hệ thống thiết bị điện ảnh, chúng tôi mang đến giải pháp livestream trọn gói, chất lượng cao và tối ưu chi phí nhất.</p>
+    </div>
+    
+    <div style="width: 100%; max-width: 900px; margin: 0 auto;">
+      <div style="border-radius: 24px; overflow: hidden; border: 1px solid var(--c-border);">
+        <img loading="lazy" decoding="async" src="images/studio_setup.jpeg" alt="Studio Livestream Chuyên Nghiệp META ECOM" class="img-studio-intro" style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <p style="text-align: center; color: var(--c-text-muted); font-size: 14px; margin-top: 16px; font-style: italic;">Studio META ECOM vận hành hệ thống máy quay 4K & bàn trộn tín hiệu chuyên nghiệp trong phiên live.</p>
+    </div>
+  </section>
+
+
+
+  <!-- SERVICES (DETAILED SPEC SHEET) -->
+  <section class="section container" id="dich-vu">
+    <div style="margin-bottom: 48px; text-align: left;">
+      <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); font-weight: 700; margin-bottom: 16px;">Dịch vụ sản xuất Livestream</h2>
+      <p style="color: var(--c-text-muted); font-size: 17px; max-width: 900px; line-height: 1.6;">Cung cấp không gian studio và host live kinh nghiệm phù hợp với những doanh nghiệp muốn tổ chức các buổi livestream tăng tương tác với khách hàng, nâng cao hình ảnh thương hiệu và tối ưu kết quả kinh doanh.</p>
+    </div>
+
+    <div class="mobile-swipe-hint" style="display: none; font-size: 13px; color: var(--c-accent); margin-bottom: 12px; text-align: right; font-weight: 600;">👉 Vuốt sang trái để xem chi tiết 2 gói ➔</div>
+    <div style="background: var(--c-glass); border: 1px solid var(--c-border); border-radius: 24px; overflow: hidden; backdrop-filter: blur(12px); overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
+        <thead>
+          <tr style="border-bottom: 1px solid var(--c-border); background: rgba(0,0,0,0.5);">
+            <th style="padding: 24px; color: #fff; font-weight: 700; width: 20%; font-family: var(--font-display);">Hạng mục</th>
+            <th style="padding: 24px; color: #fff; font-weight: 700; width: 40%; border-left: 1px solid var(--c-border); font-family: var(--font-display);">Gói Livestream Điện Thoại</th>
+            <th style="padding: 24px; color: var(--c-accent); font-weight: 800; width: 40%; border-left: 1px solid var(--c-border); font-family: var(--font-display);">Gói Livestream Máy Quay Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 24px; color: #fff; font-weight: 600; border-bottom: 1px solid var(--c-border);">Tư vấn</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">Tư vấn concept và kịch bản livestream chuyên nghiệp</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">Tư vấn concept và kịch bản livestream chuyên nghiệp</td>
+          </tr>
+          <tr>
+            <td style="padding: 24px; color: #fff; font-weight: 600; border-bottom: 1px solid var(--c-border);">Kế hoạch & Báo cáo</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">Kế hoạch, lịch livestream & báo cáo định kỳ</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">Kế hoạch, lịch livestream & báo cáo định kỳ</td>
+          </tr>
+          <tr>
+            <td style="padding: 24px; color: #fff; font-weight: 600; border-bottom: 1px solid var(--c-border);">Cung cấp studio & thiết bị</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">
+              Cung cấp studio livestream chuyên nghiệp (&lt;20m2)<br><br>
+              <strong style="color: #fff;">Cung cấp thiết bị livestream điện thoại chuyên nghiệp:</strong> 01 điện thoại smartphone, 01 đèn ringlight
+            </td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">
+              Cung cấp studio livestream chuyên nghiệp (&lt;20m2)<br><br>
+              <strong style="color: #fff;">Cung cấp thiết bị livestream PC chuyên nghiệp:</strong> 01 máy quay Sony A7M3; 01 Gimbal DJI RSC 2; 02 mic thu âm Rode; máy tính
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px; color: #fff; font-weight: 600; border-bottom: 1px solid var(--c-border);">Kịch bản livestream</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">Xây dựng kịch bản livestream</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">Xây dựng kịch bản livestream chuyên nghiệp</td>
+          </tr>
+          <tr>
+            <td style="padding: 24px; color: #fff; font-weight: 600; border-bottom: 1px solid var(--c-border);">Cung cấp nhân sự sản xuất livestream</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">
+              Cung cấp nhân sự quản lý livestream<br><br>
+              <strong style="color: #fff;">Cung cấp nhân sự host live chuyên nghiệp (01 host/session)</strong>
+            </td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-bottom: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">
+              Cung cấp nhân sự quản lý livestream; nhân sự kỹ thuật, trợ live, hỗ trợ trưng bày sản phẩm<br><br>
+              <strong style="color: #fff;">Cung cấp nhân sự host live chuyên nghiệp (01 host/session)</strong>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px; color: #fff; font-weight: 600;">Hỗ trợ khác</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-left: 1px solid var(--c-border);">Hỗ trợ mở tính năng live PC, kháng cáo các vi phạm livestream</td>
+            <td style="padding: 24px; color: var(--c-text-muted); border-left: 1px solid var(--c-border);">Hỗ trợ mở tính năng live PC, kháng cáo các vi phạm livestream</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- QUY TRÌNH TRIỂN KHAI 5 BƯỚC (UI BLOG / ARTICLE B2B CHUẨN THỜI TRANG) -->
+  <section class="section container" id="quy-trinh">
+    <div style="width: 100%; margin-bottom: 40px; text-align: left;">
+      <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); font-weight: 700; margin-bottom: 16px;">Quy Trình Triển Khai Phiên Livestream Bán Hàng Chuyên Nghiệp</h2>
+      <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8; text-align: left;">
+        Có thể bạn chưa biết, sự khác biệt lớn nhất giữa một phiên livestream tự phát và một chiến dịch được dựng xây chuyên nghiệp như <strong>dịch vụ livestream bán hàng META ECOM</strong> nằm ở quy trình triển khai, kiểm soát rủi ro, tối ưu hóa ngân sách cùng một EKIP có năng lực thực thi nghiêm túc.
+      </p>
+      <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8; margin-top: 16px; text-align: left;">
+        Tại <strong>META ECOM</strong>, chúng tôi áp dụng quy trình chuẩn hóa với 5 bước nghiêm ngặt, đảm bảo thời gian của doanh nghiệp đầu tư cho phiên live thành giá trị thương hiệu uy tín và chuyển đổi thực tế, cụ thể như sau:
+      </p>
+    </div>
+
+    <!-- BƯỚC 1 -->
+    <div style="width: 100%; margin-bottom: 48px;">
+      <h3 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 20px;">1. TIẾP NHẬN VÀ TƯ VẤN</h3>
+      <div style="max-width: 900px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--c-border); margin-bottom: 20px;">
+        <img loading="lazy" decoding="async" src="images/stage1.png?v=3" alt="Giai đoạn 1: Tiếp nhận & Tư vấn META ECOM" class="img-stage" style="width: 100%; height: auto; display: block;">
+      </div>
+      <p style="color: var(--c-text-muted); font-size: 16px; line-height: 1.8; text-align: left; margin-bottom: 12px;">
+        Ở giai đoạn đầu tiên, <strong>META ECOM</strong> sẽ tiếp nhận nhu cầu và ngồi lại với khách hàng để làm rõ mục tiêu chiến lược của dự án, phân tích sâu bài toán chuyển đổi kinh doanh cho từng ngành hàng cụ thể:
+      </p>
+      <ul style="color: var(--c-text-muted); font-size: 16px; line-height: 1.8; padding-left: 24px; text-align: left;">
+        <li style="margin-bottom: 8px;"><strong>Phân tích ngành hàng:</strong> Sản phẩm của bạn dù là thời trang, mỹ phẩm, gia dụng hay công nghệ... META ECOM đều thiết kế hình ảnh cao cấp, tương thích hiển thị đa nền tảng.</li>
+        <li><strong>Định vị chân dung khách hàng:</strong> Xác định cụ thể tệp người xem live để lựa chọn <strong>"Khung giờ Vàng"</strong>, phong cách ngôn ngữ, nhịp độ và kịch bản chốt đơn phù hợp.</li>
+      </ul>
+    </div>
+
+    <!-- BƯỚC 2 -->
+    <div style="width: 100%; margin-bottom: 48px;">
+      <h3 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 20px;">2. KHẢO SÁT BỐI CẢNH VÀ LÊN KỊCH BẢN</h3>
+      <div style="max-width: 900px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--c-border); margin-bottom: 20px;">
+        <img loading="lazy" decoding="async" src="images/stage2.png?v=3" alt="Giai đoạn 2: Khảo sát & Lên kịch bản" class="img-stage" style="width: 100%; height: auto; display: block;">
+      </div>
+      <p style="color: var(--c-text-muted); font-size: 16px; line-height: 1.8; text-align: left; margin-bottom: 12px;">
+        Tiếp đến, đội ngũ chuyên gia sẽ lên phương án không gian Studio phù hợp với bộ nhận diện thương hiệu, tạo cảm giác uy tín ngay từ cái nhìn đầu tiên.
+      </p>
+      <p style="color: var(--c-text-muted); font-size: 16px; line-height: 1.8; text-align: left;">
+        Việc tạo kịch bản điều hướng bán hàng rõ ràng giúp MC đi đúng trọng tâm chiến dịch, tạo các giai đoạn kích thích mua hàng qua <strong>Deal độc quyền, voucher đếm ngược và Mini Game</strong> trao quà hấp dẫn giữ chân người xem.
+      </p>
+    </div>
+
+    <!-- BƯỚC 3 -->
+    <div style="width: 100%; margin-bottom: 48px;">
+      <h3 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 20px;">3. SETUP VÀ TEST KỸ THUẬT CHUẨN TRUYỀN HÌNH</h3>
+      <div style="max-width: 900px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--c-border); margin-bottom: 20px;">
+        <img loading="lazy" decoding="async" src="images/stage3.png?v=3" alt="Giai đoạn 3: Setup & Test kỹ thuật" class="img-stage" style="width: 100%; height: auto; display: block;">
+      </div>
+      <p style="color: var(--c-text-muted); font-size: 16px; line-height: 1.8; text-align: left; margin-bottom: 12px;">
+        Rủi ro lớn nhất của Livestream là mất mạng, mờ hình hay mất tiếng. Tại <strong>META ECOM</strong>, chúng tôi triệt tiêu 100% rủi ro này bằng quy trình kỹ thuật chuẩn đài truyền hình:
+      </p>
+      <ul style="color: var(--c-text-muted); font-size: 16px; line-height: 1.8; padding-left: 24px; text-align: left;">
+        <li style="margin-bottom: 8px;"><strong>Hạ tầng mạng chuyên dụng:</strong> Sử dụng đường truyền mạng tốc độ cao (băng thông rộng dedicated) cam kết <strong>không giật lag, không sụt Bitrate</strong>.</li>
+        <li style="margin-bottom: 8px;"><strong>Hệ thống phần cứng 4K:</strong> Bố trí đa máy quay Sony 4K, hệ thống đèn studio chuẩn CRI 95+ và bàn trộn hình chuyển cảnh mượt mà.</li>
+        <li><strong>Tổng duyệt nghiêm ngặt:</strong> EKIP kỹ thuật âm thanh, ánh sáng, banner ghim đơn và MC thực hiện tổng duyệt test thiết bị trước khi bấm máy 1–2 tiếng.</li>
+      </ul>
+    </div>
+
+    <!-- BƯỚC 4 -->
+    <div style="width: 100%; margin-bottom: 48px;">
+      <h3 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 20px;">4. BẤM MÁY PHÁT SÓNG CHÍNH THỨC</h3>
+      <div style="max-width: 900px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--c-border); margin-bottom: 20px;">
+        <img loading="lazy" decoding="async" src="images/stage4.png?v=3" alt="Giai đoạn 4: Bấm máy phát sóng chính thức" class="img-stage" style="width: 100%; height: auto; display: block;">
+      </div>
+      <p style="color: var(--c-text-muted); font-size: 16px; line-height: 1.8; text-align: left;">
+        Chính thức phát sóng phiên live đa nền tảng (TikTok Shop, Shopee Live, Facebook). Đội ngũ EKIP vận hành trọn gói 4 vai trò (Host live + Cameraman + Kỹ thuật bàn trộn + Trợ live ghim đơn) giữ nhịp phiên live luôn năng lượng và tăng trưởng tỷ lệ chốt đơn liên tục.
+      </p>
+    </div>
+
+    <!-- BƯỚC 5 -->
+    <div style="width: 100%; margin-bottom: 48px;">
+      <h3 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 20px;">5. NGHIỆM THU VÀ BÀN GIAO FILE LƯU TRỮ 4K (RE-USE ADS)</h3>
+      <div style="max-width: 900px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--c-border); margin-bottom: 20px;">
+        <img loading="lazy" decoding="async" src="images/stage5.png?v=3" alt="Giai đoạn 5: Nghiệm thu & Bàn giao File 4K" class="img-stage" style="width: 100%; height: auto; display: block;">
+      </div>
+      <p style="color: var(--c-text-muted); font-size: 16px; line-height: 1.8; text-align: left;">
+        Sau khi kết thúc phiên live, META ECOM xuất báo cáo số liệu hiệu suất và <strong>bàn giao 100% File Video gốc 4K</strong> để thương hiệu tái sử dụng cắt dựng clip ngắn (Reels/TikTok/Shorts) chạy quảng cáo Video Ads, tối ưu ROI tối đa.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section container" id="bang-gia">
+    <div style="width: 100%; margin-bottom: 48px; text-align: left;">
+      <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); font-weight: 700; color: var(--c-accent); margin-bottom: 16px;">Bảng giá dịch vụ sản xuất livestream</h2>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3 class="price-title" style="text-align: center; justify-content: center;">Gói Điện Thoại</h3>
+        <p class="price-sub" style="text-align: center;">Tối ưu chi phí để shop mới bắt đầu.</p>
+        <div class="price-val" style="text-align: center; justify-content: center;">105.000đ<span>/h</span></div>
+        
+        <ul class="feature-list">
+          <li><span class="check-icon">✓</span> Studio livestream cách âm (&lt;20m²)</li>
+          <li><span class="check-icon">✓</span> 01 Smartphone chuyên dụng + Ringlight</li>
+          <li><span class="check-icon">✓</span> <b>01 Host Live + 01 Quản lý phiên</b></li>
+          <li><span class="check-icon">✓</span> Tư vấn concept & kịch bản livestream</li>
+          <li><span class="check-icon">✓</span> Kế hoạch, lịch live & báo cáo định kỳ</li>
+          <li><span class="check-icon">✓</span> Hỗ trợ mở Live PC & kháng vi phạm</li>
+        </ul>
+        
+        <a href="#lien-he" class="btn-pill btn-pill-secondary btn-full">Chọn gói này</a>
+      </div>
+
+      <div class="price-card recommended">
+        <div class="rec-badge">Khuyên Dùng</div>
+        <h3 class="price-title" style="text-align: center; justify-content: center;">Gói Máy Quay Pro</h3>
+        <p class="price-sub" style="text-align: center;">Chuẩn hình ảnh 4K sắc nét, bảo chứng thương hiệu.</p>
+        <div class="price-val" style="text-align: center; justify-content: center;">130.000đ<span>/h</span></div>
+        
+        <ul class="feature-list">
+          <li><span class="check-icon">✓</span> Studio chuyên nghiệp + PC luồng mạnh</li>
+          <li><span class="check-icon">✓</span> <b>Sony A7M3 Full-frame + Gimbal DJI</b></li>
+          <li><span class="check-icon">✓</span> <b>3 Đèn Studio chuyên dụng + 2 Mic Rode</b></li>
+          <li><span class="check-icon">✓</span> <b>01 Host + 01 Kỹ thuật + 01 Trợ live</b></li>
+          <li><span class="check-icon">✓</span> Hỗ trợ trưng bày, decor sản phẩm</li>
+          <li><span class="check-icon">✓</span> Hỗ trợ kháng vi phạm cấp tốc</li>
+        </ul>
+        
+        <a href="#lien-he" class="btn-pill btn-pill-primary btn-full">Chọn gói Máy Quay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY (CÂU CHUYỆN THÀNH CÔNG) — Navy spotlight + Thách thức / Giải pháp / Kết quả -->
+  <section class="section ss-section" id="thanh-cong" aria-labelledby="ss-heading">
+    <style>
+      .ss-section { background: transparent; color: #000; }
+      .ss-head { text-align: center; max-width: 760px; margin: 0 auto 28px; }
+      .ss-eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--c-accent); margin-bottom: 12px; }
+      .ss-title { font-family: var(--font-display); font-size: clamp(26px, 3.2vw, 38px); font-weight: 800; line-height: 1.25; color: var(--c-brand-navy, #160E44); margin-bottom: 12px; }
+      .ss-subtitle { font-size: 16px; color: #555; }
+
+      /* Mở rộng khung section sang 2 bên lề */
+      .ss-section > .container { max-width: 1520px; padding: 0 32px; }
+
+      /* Slider: 2 mũi tên hai bên */
+      .ss-slider { position: relative; padding: 0 64px; }
+      .ss-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; background: transparent; border: 2px solid var(--c-brand-navy, #160E44); color: var(--c-brand-navy, #160E44); font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.25s; z-index: 3; }
+      .ss-nav:hover { background: var(--c-accent); border-color: var(--c-accent); color: #fff; }
+      .ss-prev { left: 0; }
+      .ss-next { right: 0; }
+      .ss-dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+      .ss-dot { width: 10px; height: 10px; border-radius: 10px; background: rgba(22, 14, 68, 0.2); border: 0; padding: 0; cursor: pointer; transition: all 0.25s; }
+      .ss-dot[aria-current="true"] { background: var(--c-accent); width: 28px; }
+
+      /* Card */
+      .ss-panel[hidden] { display: none; }
+      .ss-card { background: #fff; color: #000; border: 2px solid var(--c-brand-navy, #160E44); border-radius: 28px; overflow: hidden; display: grid; grid-template-columns: 1.4fr 1fr; animation: ss-fade 0.35s ease; }
+      @keyframes ss-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+      .ss-main { padding: 36px 40px; }
+      .ss-client { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--c-brand-navy, #160E44); background: rgba(22, 14, 68, 0.06); padding: 6px 14px; border-radius: 100px; margin-bottom: 24px; }
+      .ss-client-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c-accent); }
+      .ss-client-logo { display: flex; align-items: center; height: 48px; margin-bottom: 24px; }
+      .ss-client-logo img { display: block; height: 40px; width: auto; max-width: 100%; object-fit: contain; }
+      .ss-client-logo--shondo img { width: 200px; height: 48px; object-fit: cover; object-position: center; margin-left: -28px; }
+      .ss-client-logo--loreal img { height: 34px; }
+      .ss-client-logo--locknlock img { height: 32px; }
+      @media (max-width: 600px) {
+        .ss-client-logo { height: 40px; margin-bottom: 18px; }
+        .ss-client-logo--shondo img { width: 168px; height: 40px; margin-left: -24px; }
+        .ss-client-logo--loreal img { height: 28px; }
+        .ss-client-logo--locknlock img { height: 26px; }
+      }
+
+      .ss-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+      .ss-metric-val { font-family: var(--font-display); font-size: clamp(32px, 3.6vw, 46px); font-weight: 900; line-height: 1.05; color: var(--c-accent); white-space: nowrap; }
+      .ss-metric-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #000; margin-top: 6px; }
+
+      .ss-story { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .ss-step h3 { font-family: var(--font-display); font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: #000; margin-bottom: 8px; padding-top: 10px; border-top: 3px solid var(--c-accent); display: inline-block; }
+      .ss-step p { font-size: 14px; line-height: 1.65; color: #000; }
+      .ss-placeholder { color: #8a8a99 !important; font-style: italic; }
+
+      .ss-visual { position: relative; min-height: 340px; }
+      .ss-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+      /* Quote + người nói */
+      .ss-quote { grid-column: 1 / -1; background: #f7f7fb; padding: 28px 40px; display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; }
+      .ss-quote-mark { font-family: Georgia, serif; font-size: 72px; line-height: 0.8; color: var(--c-accent); }
+      .ss-quote blockquote { font-size: 17px; line-height: 1.7; font-style: italic; color: #000; margin: 0 0 16px; }
+      .ss-author { display: flex; align-items: center; gap: 12px; }
+      .ss-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--c-brand-navy, #160E44); color: #fff; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+      .ss-avatar img { width: 100%; height: 100%; object-fit: cover; }
+      .ss-author-name { font-weight: 800; font-size: 15px; color: #000; }
+      .ss-author-role { font-size: 13px; color: #555; }
+
+      @media (max-width: 992px) {
+        .ss-card { grid-template-columns: 1fr; }
+        .ss-visual { min-height: 240px; order: -1; }
+        .ss-main { padding: 28px 24px; }
+        .ss-story { grid-template-columns: 1fr; gap: 16px; }
+        .ss-quote { padding: 24px; grid-template-columns: 1fr; gap: 4px; }
+        .ss-quote-mark { font-size: 56px; }
+        /* Màn nhỏ: mũi tên nằm đè lên ảnh đầu card */
+        .ss-slider { padding: 0; }
+        .ss-section > .container { padding: 0 20px; }
+        .ss-nav { top: 120px; width: 40px; height: 40px; font-size: 16px; background: rgba(22, 14, 68, 0.7); border-color: rgba(255, 255, 255, 0.6); color: #fff; }
+        .ss-prev { left: 10px; }
+        .ss-next { right: 10px; }
+      }
+      @media (max-width: 640px) {
+        .ss-card { border-radius: 20px; }
+        .ss-metrics { grid-template-columns: repeat(2, 1fr); }
+        .ss-quote blockquote { font-size: 15px; }
+      }
+    </style>
+
+    <div class="container">
+      <div class="ss-head">
+        <span class="ss-eyebrow">Câu chuyện thành công</span>
+        <h2 class="ss-title" id="ss-heading">Thương hiệu lớn tin chọn META ECOM</h2>
+        <p class="ss-subtitle">Kết quả thực tế từ các phiên livestream bán hàng do META ECOM sản xuất và vận hành.</p>
+      </div>
+
+      <div class="ss-slider" aria-roledescription="carousel" aria-label="Câu chuyện khách hàng">
+      <button class="ss-nav ss-prev" id="ss-prev" type="button" aria-label="Câu chuyện trước">❮</button>
+
+      <!-- ===== KHÁCH HÀNG 1: SHONDO ===== -->
+      <article class="ss-panel" aria-roledescription="slide" aria-label="1 / 3: Shondo Vietnam">
+        <div class="ss-card">
+          <div class="ss-main">
+            <div class="ss-client-logo ss-client-logo--shondo"><img src="images/LOGO%20SHONDO.jpg" alt="Logo Shondo Vietnam – thương hiệu thời trang" loading="lazy" decoding="async"></div>
+            <div class="ss-metrics">
+              <div><div class="ss-metric-val">1.000+</div><div class="ss-metric-label">Đơn hàng mới</div></div>
+              <div><div class="ss-metric-val">10.000%</div><div class="ss-metric-label">Tăng trưởng doanh thu</div></div>
+            </div>
+            <div class="ss-story">
+              <div class="ss-step">
+                <h3>Thách thức</h3>
+                <!-- TODO: thay bằng khó khăn thực tế của Shondo -->
+                <p class="ss-placeholder">[Khó khăn của Shondo trước khi hợp tác với META ECOM — sẽ cập nhật]</p>
+              </div>
+              <div class="ss-step">
+                <h3>Giải pháp</h3>
+                <!-- DEMO: kiểm tra lại cho đúng phạm vi đã triển khai -->
+                <p>Thiết lập studio livestream 4K, xây dựng kịch bản bán hàng theo khung giờ vàng và vận hành EKIP chuyên nghiệp cho các phiên live trên sàn TMĐT.</p>
+              </div>
+              <div class="ss-step">
+                <h3>Kết quả</h3>
+                <p>Hơn 1.000 đơn hàng mới và doanh thu tăng trưởng 10.000% so với trước khi hợp tác.</p>
+              </div>
+            </div>
+          </div>
+          <div class="ss-visual">
+            <img src="images/shondo_product.png" alt="Sản phẩm sandal Shondo Vietnam trong phiên livestream do META ECOM sản xuất" loading="lazy">
+          </div>
+          <div class="ss-quote">
+            <div class="ss-quote-mark" aria-hidden="true">“</div>
+            <div>
+              <blockquote>META ECOM rất có tài trong việc xây dựng nền tảng cho các thương hiệu có mục tiêu phát triển trên các sàn TMĐT. Các bạn nhanh nhạy, luôn bắt nhịp xu thế thị trường nên khách hàng, đối tác an tâm và đồng phát triển.</blockquote>
+              <div class="ss-author">
+                <!-- TODO: thay chữ viết tắt bằng <img loading="lazy" decoding="async" src="images/..." alt="..."> khi có ảnh -->
+                <div class="ss-avatar">SD</div>
+                <div>
+                  <div class="ss-author-name">[Họ tên người đại diện]</div>
+                  <div class="ss-author-role">[Chức danh] · Shondo Vietnam</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== KHÁCH HÀNG 2: L'ORÉAL PARIS ===== -->
+      <article class="ss-panel" aria-roledescription="slide" aria-label="2 / 3: L'Oréal Paris" hidden>
+        <div class="ss-card">
+          <div class="ss-main">
+            <div class="ss-client-logo ss-client-logo--loreal"><img src="images/logo-loreal.svg" alt="Logo L'Oréal Paris – thương hiệu mỹ phẩm" loading="lazy" decoding="async"></div>
+            <div class="ss-metrics">
+              <div><div class="ss-metric-val">5.000+</div><div class="ss-metric-label">Đơn hàng</div></div>
+              <div><div class="ss-metric-val">TOP 1</div><div class="ss-metric-label">TikTok Shop ngành mỹ phẩm</div></div>
+              <div><div class="ss-metric-val">x3</div><div class="ss-metric-label">Tỷ lệ chuyển đổi</div></div>
+            </div>
+            <div class="ss-story">
+              <div class="ss-step">
+                <h3>Thách thức</h3>
+                <!-- TODO: thay bằng khó khăn thực tế của L'Oréal -->
+                <p class="ss-placeholder">[Khó khăn của L'Oréal Paris trước khi hợp tác với META ECOM — sẽ cập nhật]</p>
+              </div>
+              <div class="ss-step">
+                <h3>Giải pháp</h3>
+                <!-- DEMO: kiểm tra lại cho đúng phạm vi đã triển khai -->
+                <p>Sản xuất phiên Mega Live với hình ảnh chuẩn TVC, kịch bản deal độc quyền – voucher đếm ngược và đội ngũ vận hành chuyên nghiệp xuyên suốt kỳ sale.</p>
+              </div>
+              <div class="ss-step">
+                <h3>Kết quả</h3>
+                <p>Hơn 5.000 đơn hàng, đạt TOP 1 TikTok Shop ngành mỹ phẩm, tỷ lệ chuyển đổi gấp 3 lần phiên live thông thường.</p>
+              </div>
+            </div>
+          </div>
+          <div class="ss-visual">
+            <img src="images/loreal_product.png" alt="Sản phẩm mỹ phẩm L'Oréal Paris trong phiên Mega Live do META ECOM sản xuất" loading="lazy">
+          </div>
+          <div class="ss-quote">
+            <div class="ss-quote-mark" aria-hidden="true">“</div>
+            <div>
+              <blockquote>Giải pháp livestream trọn gói của META ECOM đã giúp chúng tôi bùng nổ doanh số trong kỳ Mega Sale. Chất lượng hình ảnh sắc nét chuẩn TVC và đội ngũ vận hành cực kỳ chuyên nghiệp, giúp tỷ lệ chuyển đổi tăng gấp 3 lần so với các phiên live thông thường.</blockquote>
+              <div class="ss-author">
+                <div class="ss-avatar">LO</div>
+                <div>
+                  <div class="ss-author-name">[Họ tên người đại diện]</div>
+                  <div class="ss-author-role">[Chức danh] · L'Oréal Paris</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== KHÁCH HÀNG 3: LOCK&LOCK ===== -->
+      <article class="ss-panel" aria-roledescription="slide" aria-label="3 / 3: Lock&amp;Lock" hidden>
+        <div class="ss-card">
+          <div class="ss-main">
+            <div class="ss-client-logo ss-client-logo--locknlock"><img src="images/LoGO%20LOCK%26LOCK.png" alt="Logo Lock&amp;Lock – thương hiệu đồ gia dụng" loading="lazy" decoding="async"></div>
+            <div class="ss-metrics">
+              <div><div class="ss-metric-val">2 tỷ+</div><div class="ss-metric-label">Doanh thu trong 12 giờ</div></div>
+              <div><div class="ss-metric-val">500K+</div><div class="ss-metric-label">Người tiếp cận</div></div>
+              <div><div class="ss-metric-val">0</div><div class="ss-metric-label">Sự cố kỹ thuật</div></div>
+            </div>
+            <div class="ss-story">
+              <div class="ss-step">
+                <h3>Thách thức</h3>
+                <!-- TODO: thay bằng khó khăn thực tế của Lock&Lock -->
+                <p class="ss-placeholder">[Khó khăn của Lock&amp;Lock trước khi hợp tác với META ECOM — sẽ cập nhật]</p>
+              </div>
+              <div class="ss-step">
+                <h3>Giải pháp</h3>
+                <!-- DEMO: kiểm tra lại cho đúng phạm vi đã triển khai -->
+                <p>Vận hành phiên live 12 tiếng liên tục với hạ tầng mạng chuyên dụng, hệ thống máy quay 4K đa góc và EKIP kỹ thuật trực xuyên suốt.</p>
+              </div>
+              <div class="ss-step">
+                <h3>Kết quả</h3>
+                <p>Hơn 2 tỷ đồng doanh thu trong 12 giờ, hơn 500.000 người tiếp cận, không phát sinh sự cố kỹ thuật nào.</p>
+              </div>
+            </div>
+          </div>
+          <div class="ss-visual">
+            <img src="images/locknlock_product.png" alt="Sản phẩm gia dụng Lock&amp;Lock trong phiên livestream 12 giờ do META ECOM vận hành" loading="lazy">
+          </div>
+          <div class="ss-quote">
+            <div class="ss-quote-mark" aria-hidden="true">“</div>
+            <div>
+              <blockquote>Chúng tôi ấn tượng với sự tận tâm và am hiểu thuật toán nền tảng của đội ngũ META ECOM. Phiên live kéo dài 12 tiếng liên tục nhưng không hề gặp bất kỳ sự cố kỹ thuật nào, lượng viewer duy trì ổn định và mang lại doanh thu kỷ lục cho thương hiệu.</blockquote>
+              <div class="ss-author">
+                <div class="ss-avatar">LL</div>
+                <div>
+                  <div class="ss-author-name">[Họ tên người đại diện]</div>
+                  <div class="ss-author-role">[Chức danh] · Lock&amp;Lock</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <button class="ss-nav ss-next" id="ss-next" type="button" aria-label="Câu chuyện tiếp theo">❯</button>
+      </div>
+
+      <div class="ss-dots" aria-hidden="true">
+        <button class="ss-dot" type="button" tabindex="-1" aria-current="true"></button>
+        <button class="ss-dot" type="button" tabindex="-1"></button>
+        <button class="ss-dot" type="button" tabindex="-1"></button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const root = document.getElementById('thanh-cong');
+        const panels = Array.from(root.querySelectorAll('.ss-panel'));
+        const dots = Array.from(root.querySelectorAll('.ss-dot'));
+        let current = 0;
+        function show(i) {
+          current = (i + panels.length) % panels.length;
+          panels.forEach((p, k) => { p.hidden = k !== current; });
+          dots.forEach((d, k) => d.setAttribute('aria-current', k === current));
+        }
+        document.getElementById('ss-prev').addEventListener('click', () => show(current - 1));
+        document.getElementById('ss-next').addEventListener('click', () => show(current + 1));
+        dots.forEach((d, k) => d.addEventListener('click', () => show(k)));
+        // Vuốt trái/phải trên điện thoại
+        let startX = null;
+        const slider = root.querySelector('.ss-slider');
+        slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        slider.addEventListener('touchend', e => {
+          if (startX === null) return;
+          const dx = e.changedTouches[0].clientX - startX;
+          if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+          startX = null;
+        });
+      })();
+    </script>
+  </section>
+
+  <!-- PORTFOLIO / DỰ ÁN DẠNG KHUNG DỌC (VERTICAL 9:16 CARDS) -->
+  <section class="section container" id="du-an">
+    <style>
+      /* Mở rộng khung section sang 2 bên lề (đồng bộ với #thanh-cong) */
+      #du-an.container { max-width: 1520px; padding-left: 32px; padding-right: 32px; }
+      @media (max-width: 992px) { #du-an.container { padding-left: 20px; padding-right: 20px; } }
+      .pf-header { width: 100%; margin-bottom: 48px; text-align: left; }
+      .pf-title { font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); font-weight: 700; color: var(--c-accent); margin-bottom: 16px; }
+      .pf-subtitle { color: var(--c-text-muted); font-size: 16px; }
+      
+      .vertical-pf-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+
+      .vcard {
+        background: rgba(18, 18, 18, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 28px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(12px);
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        cursor: pointer;
+      }
+
+      .vcard:hover {
+        transform: translateY(-8px);
+        border-color: rgba(245, 176, 21, 0.5);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 176, 21, 0.15);
+      }
+
+      .vcard-media {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #000;
+      }
+
+      .vcard-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .vcard:hover .vcard-media img {
+        transform: scale(1.04);
+      }
+
+      .vcard-top-bar {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        right: 14px;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+      }
+
+      .vcard-user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        padding: 4px 10px 4px 6px;
+        border-radius: 100px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .vcard-avatar {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--c-accent);
+        color: #000;
+        font-weight: 800;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .vcard-username {
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        max-width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .vcard-share {
+        font-size: 11px;
+        font-weight: 600;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        padding: 4px 10px;
+        border-radius: 100px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .vcard-play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.45);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        transition: all 0.3s ease;
+      }
+
+      .vcard-play-btn::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 16px;
+        border-color: transparent transparent transparent #ffffff;
+        margin-left: 4px;
+      }
+
+      .vcard:hover .vcard-play-btn {
+        transform: translate(-50%, -50%) scale(1.1);
+        background: var(--c-accent);
+        border-color: var(--c-accent);
+      }
+
+      .vcard:hover .vcard-play-btn::after {
+        border-color: transparent transparent transparent #000000;
+      }
+
+      .vcard-info {
+        padding: 20px 8px 8px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .vcard-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(245, 176, 21, 0.12);
+        border: 1px solid rgba(245, 176, 21, 0.3);
+        color: var(--c-accent);
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 6px 14px;
+        border-radius: 100px;
+        margin-bottom: 14px;
+      }
+
+      .vcard-title {
+        font-family: var(--font-display);
+        font-size: 20px;
+        font-weight: 800;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+        line-height: 1.25;
+      }
+
+      .vcard-desc {
+        font-size: 14px;
+        color: var(--c-text-muted);
+        line-height: 1.6;
+      }
+
+      @media (max-width: 992px) {
+        .vertical-pf-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      }
+      @media (max-width: 640px) {
+        .vertical-pf-grid { grid-template-columns: 1fr; gap: 24px; }
+      }
+    </style>
+
+    <div class="pf-header">
+      <h2 class="pf-title">Các phiên live & Khóa học thực tế</h2>
+      <p class="pf-subtitle">Khám phá các chiến dịch livestream bán hàng & câu chuyện học viên bùng nổ doanh số do META ECOM vận hành.</p>
+    </div>
+
+    <div class="vertical-pf-grid">
+      <!-- Card 1: MẠNH VIBE -->
+      <div class="vcard" onclick="openVideoModal('https://www.youtube.com/embed/ScMzIvxBSi4')">
+        <div class="vcard-media">
+          <div class="vcard-top-bar">
+            <div class="vcard-user">
+              <div class="vcard-avatar">☀️</div>
+              <div class="vcard-username">XÂY NHÂN HI...</div>
+            </div>
+            <div class="vcard-share">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              Chia sẻ
+            </div>
+          </div>
+          <div class="vcard-play-btn"></div>
+          <img loading="lazy" decoding="async" src="images/studio_setup.jpeg" alt="Mạnh Vibe">
+        </div>
+        <div class="vcard-info">
+          <h3 class="vcard-title">MẠNH VIBE</h3>
+          <p class="vcard-desc">Ứng dụng AI tạo ra các hệ thống bán hàng và funnel, tăng trưởng lên tới 4.000 học viên.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: HIVI HIẾU NGUYỄN -->
+      <div class="vcard" onclick="openVideoModal('https://www.youtube.com/embed/L_LUpnjgPso')">
+        <div class="vcard-media">
+          <div class="vcard-top-bar">
+            <div class="vcard-user">
+              <div class="vcard-avatar">HV</div>
+              <div class="vcard-username">HIVI HIẾU</div>
+            </div>
+            <div class="vcard-share">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              Chia sẻ
+            </div>
+          </div>
+          <div class="vcard-play-btn"></div>
+          <img loading="lazy" decoding="async" src="images/project_fashion.png" alt="Hivi Hiếu Nguyễn">
+        </div>
+        <div class="vcard-info">
+          <h3 class="vcard-title">HIVI HIẾU NGUYỄN</h3>
+          <p class="vcard-desc">Từ 0 follower đến 200 học viên với khóa AI Chuyên Gia.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: PHƯƠNG NGUYỄN ENGLISH -->
+      <div class="vcard" onclick="openVideoModal('https://www.youtube.com/embed/ScMzIvxBSi4')">
+        <div class="vcard-media">
+          <div class="vcard-top-bar">
+            <div class="vcard-user">
+              <div class="vcard-avatar">PN</div>
+              <div class="vcard-username">TOP EXPERT</div>
+            </div>
+            <div class="vcard-share">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              Chia sẻ
+            </div>
+          </div>
+          <div class="vcard-play-btn"></div>
+          <img loading="lazy" decoding="async" src="images/project_tech.png" alt="Phương Nguyễn English">
+        </div>
+        <div class="vcard-info">
+          <h3 class="vcard-title">PHƯƠNG NGUYỄN ENGLISH</h3>
+          <p class="vcard-desc">Từ 0 follower lên 50.000 follower và đạt 200 học viên trong 30 ngày cho khóa tiếng Anh.</p>
+        </div>
+      </div>
+
+      <!-- Card 4: SHONDO VIETNAM -->
+      <div class="vcard" onclick="openVideoModal('https://www.youtube.com/embed/L_LUpnjgPso')">
+        <div class="vcard-media">
+          <div class="vcard-top-bar">
+            <div class="vcard-user">
+              <div class="vcard-avatar">SD</div>
+              <div class="vcard-username">SHONDO LIVE</div>
+            </div>
+            <div class="vcard-share">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              Chia sẻ
+            </div>
+          </div>
+          <div class="vcard-play-btn"></div>
+          <img loading="lazy" decoding="async" src="images/shondo_product.png" alt="Shondo Vietnam">
+        </div>
+        <div class="vcard-info">
+          <h3 class="vcard-title">SHONDO VIETNAM</h3>
+          <p class="vcard-desc">Livestream Mega Sale 11.11 - Tăng trưởng 10.000% doanh thu & 1.000+ đơn hàng mới.</p>
+        </div>
+      </div>
+
+      <!-- Card 5: L'ORÉAL PARIS -->
+      <div class="vcard" onclick="openVideoModal('https://www.youtube.com/embed/ScMzIvxBSi4')">
+        <div class="vcard-media">
+          <div class="vcard-top-bar">
+            <div class="vcard-user">
+              <div class="vcard-avatar">LO</div>
+              <div class="vcard-username">L'ORÉAL PARIS</div>
+            </div>
+            <div class="vcard-share">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              Chia sẻ
+            </div>
+          </div>
+          <div class="vcard-play-btn"></div>
+          <img loading="lazy" decoding="async" src="images/loreal_product.png" alt="L'Oréal Paris">
+        </div>
+        <div class="vcard-info">
+          <h3 class="vcard-title">L'ORÉAL PARIS</h3>
+          <p class="vcard-desc">Phiên Live Ra Mắt Sản Phẩm Mới - Đạt Top 1 TikTok Shop ngành mỹ phẩm.</p>
+        </div>
+      </div>
+
+      <!-- Card 6: LOCK&LOCK -->
+      <div class="vcard" onclick="openVideoModal('https://www.youtube.com/embed/L_LUpnjgPso')">
+        <div class="vcard-media">
+          <div class="vcard-top-bar">
+            <div class="vcard-user">
+              <div class="vcard-avatar">LL</div>
+              <div class="vcard-username">LOCK&LOCK</div>
+            </div>
+            <div class="vcard-share">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              Chia sẻ
+            </div>
+          </div>
+          <div class="vcard-play-btn"></div>
+          <img loading="lazy" decoding="async" src="images/locknlock_product.png" alt="Lock&Lock">
+        </div>
+        <div class="vcard-info">
+          <h3 class="vcard-title">LOCK&LOCK</h3>
+          <p class="vcard-desc">Livestream 12 tiếng liên tục - Đạt 2 Tỷ+ doanh thu & 500K+ người tiếp cận.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CONTACT / TERMINAL -->
+  <section class="section container" id="lien-he">
+    <div class="contact-box">
+      <div class="contact-info">
+        <h2>Bắt đầu chiến dịch Live tiếp theo.</h2>
+        <p style="color: var(--c-text-muted); font-size: 18px; margin-bottom: 48px;">Đội ngũ chuyên gia từ META ECOM sẽ liên hệ lại với bạn trong vòng 30 phút làm việc.</p>
+        
+        <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--c-accent); margin-bottom: 8px; font-weight: 700;">Hotline Trực Tiếp 24/7</div>
+        <div style="font-family: var(--font-display); font-size: clamp(32px, 3vw, 40px); font-weight: 900;">092 999 66 99</div>
+      </div>
+      
+      <div class="contact-form">
+        <form id="lead-form" onsubmit="handleLeadSubmit(event)">
+          <div class="form-group">
+            <label class="form-label">Họ và Tên <span style="color: #ef4444;">*</span></label>
+            <input type="text" id="lead-name" class="form-input" required placeholder="Nhập tên của bạn (Ví dụ: Nguyễn Văn A)">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Số Điện Thoại / Zalo <span style="color: #ef4444;">*</span></label>
+            <input type="tel" id="lead-phone" class="form-input" required placeholder="0901234567" oninput="validatePhoneLive(this)">
+            <div id="phone-error" style="display: none; color: #ef4444; font-size: 13px; margin-top: 6px; font-weight: 500;">⚠️ Vui lòng nhập số điện thoại Việt Nam hợp lệ (10 chữ số)</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Gói Dịch Vụ Quan Tâm</label>
+            <select id="lead-package" class="form-input" style="appearance: none; cursor: pointer;">
+              <option value="Gói Máy Quay Pro (Khuyên dùng)">Gói Máy Quay Pro (Khuyên dùng)</option>
+              <option value="Gói Điện Thoại">Gói Điện Thoại</option>
+              <option value="Gói E2E (Live + Ads + Video)">Gói E2E (Live + Ads + Video)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Ghi Chú</label>
+            <textarea id="lead-note" class="form-input" rows="3" placeholder="Số giờ live/tháng dự kiến, ngành hàng..."></textarea>
+          </div>
+
+          <button type="submit" id="btn-submit-lead" class="btn-pill btn-pill-primary btn-full" style="border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <span>Gửi Yêu Cầu Tư Vấn →</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px;">
+      <img loading="lazy" decoding="async" src="images/logo_icon.png" alt="META ECOM Logo" style="height: 36px; width: auto; filter: drop-shadow(0 2px 8px rgba(0, 240, 180, 0.3));">
+      <span style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #fff; letter-spacing: 0.5px;">META ECOM</span>
+    </div>
+    <p>Giải pháp vận hành Livestream E-commerce toàn diện.</p>
+    <p style="margin-top: 12px; font-size: 13px;">Hotline 24/7: <a href="tel:0929996699" style="color: var(--c-accent); font-weight: 700;">092 999 66 99</a> | Email: <a href="mailto:contact@metaecom.vn" style="color: #fff;">contact@metaecom.vn</a></p>
+    <p style="margin-top: 24px; opacity: 0.5;">© 2026 META ECOM. All rights reserved.</p>
+  </footer>
+
+  <!-- FLOATING CSKH WIDGET -->
+  <div class="floating-widget">
+    <a href="tel:0929996699" class="float-btn float-phone" title="Gọi Hotline 24/7">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+    <a href="https://zalo.me/0929996699" target="_blank" class="float-btn float-zalo" title="Chat Zalo Tư Vấn">
+      Zalo
+    </a>
+  </div>
+
+  <!-- VIDEO POPUP MODAL -->
+  <div id="video-modal" style="display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); align-items: center; justify-content: center; padding: 24px;">
+    <div style="position: relative; width: 100%; max-width: 960px; background: #111; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 30px 60px rgba(0,0,0,0.9);">
+      <button onclick="closeVideoModal()" style="position: absolute; top: 16px; right: 16px; z-index: 10; width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='var(--c-accent)'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,0,0,0.75)'; this.style.color='#fff';">✕</button>
+      <div style="position: relative; padding-top: 56.25%; width: 100%;">
+        <iframe id="video-iframe" src="" style="position: absolute; inset: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- THANK YOU / SUCCESS MODAL (GLASSMORPHISM) -->
+  <div id="success-modal" style="display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); align-items: center; justify-content: center; padding: 24px;">
+    <style>
+      @keyframes pulse-green-check {
+        0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+        70% { box-shadow: 0 0 0 20px rgba(34, 197, 94, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+      }
+    </style>
+    <div style="position: relative; width: 100%; max-width: 520px; background: rgba(18, 18, 18, 0.95); border-radius: 32px; padding: 48px 36px; text-align: center; border: 1px solid rgba(245, 176, 21, 0.35); box-shadow: 0 30px 70px rgba(0,0,0,0.95), 0 0 40px rgba(245, 176, 21, 0.15);">
+      <button onclick="closeSuccessModal()" style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='var(--c-accent)'; this.style.color='#000';" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.color='#fff';">✕</button>
+
+      <!-- ANIMATED CHECKMARK ICON -->
+      <div style="width: 80px; height: 80px; margin: 0 auto 28px; background: rgba(34, 197, 94, 0.12); border: 2px solid #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(34, 197, 94, 0.4); animation: pulse-green-check 2s infinite;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h3 style="font-family: var(--font-display); font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 12px; letter-spacing: -0.5px;">Gửi Yêu Cầu Thành Công!</h3>
+      
+      <p style="font-size: 16px; color: var(--c-text-muted); line-height: 1.6; margin-bottom: 24px;">
+        Cảm ơn <strong id="modal-user-name" style="color: var(--c-accent);">Anh/Chị</strong> đã lựa chọn giải pháp Livestream từ <strong>META ECOM</strong>.
+      </p>
+
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 20px; margin-bottom: 32px; text-align: left; font-size: 14px; color: var(--c-text-muted); line-height: 1.8;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+          <span>Số điện thoại nhận tư vấn:</span>
+          <strong id="modal-user-phone" style="color: #fff;">090...</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+          <span>Gói dịch vụ đã chọn:</span>
+          <strong id="modal-user-package" style="color: var(--c-accent);">Gói Máy Quay Pro</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span>SLA Thời gian phản hồi:</span>
+          <strong style="color: #22c55e;">⚡ Trong vòng 30 phút</strong>
+        </div>
+      </div>
+
+      <button onclick="closeSuccessModal()" class="btn-pill btn-pill-primary btn-full" style="border: none; cursor: pointer; font-size: 16px; box-shadow: 0 10px 25px rgba(245, 176, 21, 0.3);">Đã Hiểu & Đóng Cửa Sổ →</button>
+    </div>
+  </div>
+
+  <script>
+    // FORM VALIDATION & SUCCESS MODAL HANDLER
+    function validatePhoneLive(input) {
+      const errorDiv = document.getElementById('phone-error');
+      const val = input.value.trim();
+      const phoneRegex = /^0[0-9]{9}$/;
+      if (val.length > 0 && !phoneRegex.test(val)) {
+        errorDiv.style.display = 'block';
+        input.style.borderColor = '#ef4444';
+        return false;
+      } else {
+        errorDiv.style.display = 'none';
+        input.style.borderColor = 'var(--c-border)';
+        return true;
+      }
+    }
+
+    function handleLeadSubmit(event) {
+      event.preventDefault();
+      const nameInput = document.getElementById('lead-name');
+      const phoneInput = document.getElementById('lead-phone');
+      const packageInput = document.getElementById('lead-package');
+      const noteInput = document.getElementById('lead-note');
+      const btnSubmit = document.getElementById('btn-submit-lead');
+
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const pkg = packageInput.value;
+
+      const phoneRegex = /^0[0-9]{9}$/;
+      if (!phoneRegex.test(phone)) {
+        document.getElementById('phone-error').style.display = 'block';
+        phoneInput.style.borderColor = '#ef4444';
+        phoneInput.focus();
+        return;
+      }
+
+      // Button loading effect
+      btnSubmit.disabled = true;
+      btnSubmit.style.opacity = '0.7';
+      btnSubmit.innerHTML = '<span>⏳ Đang Gửi Yêu Cầu...</span>';
+
+      // --- CONFIGURABLE WEBHOOK INTEGRATION ---
+      const TELEGRAM_BOT_TOKEN = '';    // Ví dụ: '123456789:ABCdef...'
+      const TELEGRAM_CHAT_ID = '';      // Ví dụ: '-100123456789' hoặc '12345678'
+      const GOOGLE_SHEET_WEBHOOK = '';  // Google Apps Script Webhook URL
+
+      // Fire Analytics Tracking Events
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', { content_name: pkg, value: 0, currency: 'VND' });
+      }
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          event_category: 'Lead Form',
+          event_label: pkg,
+          value: 1
+        });
+      }
+
+      // Prepare Telegram Webhook Request
+      const noteText = noteInput && noteInput.value.trim() ? noteInput.value.trim() : 'Không có';
+      const telegramMessage = `🚨 <b>KHÁCH HÀNG ĐĂNG KÝ MỚI (META ECOM)</b>\n\n👤 <b>Họ tên:</b> ${name}\n📞 <b>SĐT / Zalo:</b> ${phone}\n📦 <b>Gói dịch vụ:</b> ${pkg}\n📝 <b>Ghi chú:</b> ${noteText}\n⏰ <b>Thời gian:</b> ${new Date().toLocaleString('vi-VN')}`;
+
+      const requests = [];
+
+      if (TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID) {
+        requests.push(
+          fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              parse_mode: 'HTML',
+              text: telegramMessage
+            })
+          }).catch(err => console.warn('Telegram Webhook Notice:', err))
+        );
+      }
+
+      if (GOOGLE_SHEET_WEBHOOK) {
+        requests.push(
+          fetch(GOOGLE_SHEET_WEBHOOK, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, phone, package: pkg, note: noteText, timestamp: new Date().toISOString() })
+          }).catch(err => console.warn('Google Sheet Webhook Notice:', err))
+        );
+      }
+
+      // Execute promises or fallback delay
+      const finishSubmit = () => {
+        // Set Modal User Data
+        document.getElementById('modal-user-name').textContent = name;
+        document.getElementById('modal-user-phone').textContent = phone;
+        document.getElementById('modal-user-package').textContent = pkg;
+
+        // Display Modal
+        const modal = document.getElementById('success-modal');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+
+        // Reset Form
+        document.getElementById('lead-form').reset();
+        btnSubmit.disabled = false;
+        btnSubmit.style.opacity = '1';
+        btnSubmit.innerHTML = '<span>Gửi Yêu Cầu Tư Vấn →</span>';
+      };
+
+      if (requests.length > 0) {
+        Promise.allSettled(requests).then(() => finishSubmit());
+      } else {
+        setTimeout(finishSubmit, 400);
+      }
+    }
+
+    function closeSuccessModal() {
+      const modal = document.getElementById('success-modal');
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function openVideoModal(videoUrl) {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('video-iframe');
+      if (!videoUrl) return;
+      
+      let embedUrl = videoUrl;
+      if (videoUrl.includes('youtube.com/watch?v=')) {
+        embedUrl = videoUrl.replace('watch?v=', 'embed/') + '?autoplay=1';
+      } else if (videoUrl.includes('youtu.be/')) {
+        embedUrl = videoUrl.replace('youtu.be/', 'youtube.com/embed/') + '?autoplay=1';
+      } else if (!embedUrl.includes('autoplay=')) {
+        embedUrl += (embedUrl.includes('?') ? '&' : '?') + 'autoplay=1';
+      }
+      
+      iframe.src = embedUrl;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('video-iframe');
+      iframe.src = '';
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const videoModal = document.getElementById('video-modal');
+      const successModal = document.getElementById('success-modal');
+
+      if (videoModal) {
+        videoModal.addEventListener('click', (e) => {
+          if (e.target === videoModal) closeVideoModal();
+        });
+      }
+
+      if (successModal) {
+        successModal.addEventListener('click', (e) => {
+          if (e.target === successModal) closeSuccessModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (videoModal && videoModal.style.display === 'flex') closeVideoModal();
+          if (successModal && successModal.style.display === 'flex') closeSuccessModal();
+        }
+      });
+    });
+  </script>
+
+
+  <script id="nav-toggle-script">
+    (function () {
+      var header = document.querySelector('.header');
+      var btn = document.getElementById('nav-toggle');
+      if (!header || !btn) return;
+      function setOpen(open) {
+        header.classList.toggle('nav-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
+      }
+      btn.addEventListener('click', function () { setOpen(!header.classList.contains('nav-open')); });
+      document.querySelectorAll('#nav-menu a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+      document.addEventListener('click', function (e) { if (!header.contains(e.target)) setOpen(false); });
+    })();
+  </script>
+</body>
+</html>
