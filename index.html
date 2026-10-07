@@ -270,8 +270,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: 48px; /* Header đã sticky, không cần bù chiều cao nữa */
-      padding-bottom: 24px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(22, 14, 68, 0.85) 0%, rgba(22, 14, 68, 0.92) 100%), 
+                  url('images/%E1%BA%A2NH%20M%E1%BB%9D%20SECTION%201.jpg') center/cover no-repeat;
     }
 
     .hero-container {
@@ -793,11 +796,18 @@
       .logo-icon-img { height: 30px; }
     }
 
-    /* Hero */
+    /* Full-width Section 1 background với ảnh ẢNH MỜ SECTION 1.jpg chìm trên TOÀN BỘ diện tích Section 1 */
+    body.light-mode .hero {
+      background: linear-gradient(180deg, rgba(22, 14, 68, 0.85) 0%, rgba(22, 14, 68, 0.92) 100%), 
+                  url('images/%E1%BA%A2NH%20M%E1%BB%9D%20SECTION%201.jpg') center/cover no-repeat;
+    }
     body.light-mode .hero-container {
-      background: #ffffff;
-      border: 2px solid var(--c-brand-navy);
-      box-shadow: none;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      color: #000000;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
     /* Logo ngang trong khung Hero */
     .hero-logo {
@@ -809,24 +819,25 @@
       margin: 0 auto 32px;
     }
     @media (max-width: 640px) {
-      .hero-logo { height: 48px; margin-bottom: 24px; }
+      .hero-logo { height: 44px; margin-bottom: 20px; }
     }
-    body.light-mode .hero-h1-top { color: rgba(17, 17, 17, 0.95); }
+    body.light-mode .hero-h1-top { color: rgba(17, 17, 17, 0.95) !important; }
     body.light-mode .hero-h1-bottom {
-      background: linear-gradient(180deg, #111111 20%, rgba(40, 40, 40, 0.85) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 4px 12px rgba(200, 148, 14, 0.2));
+      background: linear-gradient(180deg, #111111 20%, rgba(40, 40, 40, 0.85) 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      filter: drop-shadow(0 4px 12px rgba(200, 148, 14, 0.2)) !important;
     }
-    body.light-mode .hero-lede { color: #555567; }
+    body.light-mode .hero-lede { color: #4b4b5c !important; }
     body.light-mode .btn-pill-secondary {
       background: #ffffff;
       border-color: rgba(0,0,0,0.18);
-      color: #111;
+      color: #111111;
     }
     body.light-mode .btn-pill-secondary:hover {
       background: #fafafa;
       border-color: var(--c-accent);
+      color: #111111;
     }
     body.light-mode .partner-logos { opacity: 0.35; filter: invert(1); }
 
@@ -1037,11 +1048,28 @@
       body.light-mode .section { padding-top: 32px; padding-bottom: 32px; }
     }
 
-    /* ===== TYPOGRAPHY: TIÊU ĐỀ & CĂN LỀ ===== */
-    /* Tiêu đề chia dòng cân đối, không để 1 chữ lẻ rơi xuống dòng dưới */
+    /* ===== TYPOGRAPHY & ALIGNMENT FIXES ===== */
     h1, h2, h3 { text-wrap: balance; }
-    /* Giữ cụm từ (vd: "META ECOM") luôn nằm chung 1 dòng */
     .nowrap { white-space: nowrap; }
+
+    /* Căn lề đều 2 bên cho tất cả các đoạn văn bản nội dung */
+    p:not([style*="text-align: center"]):not(.ss-subtitle):not(.price-sub):not(.vcard-info p):not(.hero-lede),
+    div[style*="font-size: 17px"],
+    .ss-quote blockquote {
+      text-align: justify !important;
+      text-justify: inter-word;
+      -webkit-hyphens: none;
+      hyphens: none;
+    }
+
+    /* Chuẩn hóa ngắt dòng cho đoạn mô tả Hero */
+    .hero-lede {
+      text-align: center !important;
+      max-width: 920px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+      font-size: 17px;
+    }
 
     @media (max-width: 640px) {
       /* Tiêu đề section gọn hơn trên điện thoại → ít bị ngắt dòng vụn */
@@ -1057,14 +1085,10 @@
         line-height: 1.4 !important;
       }
 
-      /* Căn đều 2 bên cho các đoạn văn nội dung (trừ chú thích / đoạn căn giữa) */
-      main ~ section p:not([style*="text-align: center"]):not(.ss-subtitle):not(.price-sub):not(.vcard-info p),
-      main ~ section > div[style*="font-size: 17px"],
-      .ss-quote blockquote {
-        text-align: justify !important;
-        text-justify: inter-word;
-        -webkit-hyphens: none;
-        hyphens: none;
+      .hero-lede {
+        font-size: 15px !important;
+        line-height: 1.75 !important;
+        margin-bottom: 24px !important;
       }
     }
 
@@ -1092,18 +1116,20 @@
     <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
   </header>
 
-  <!-- HERO SECTION -->
-  <main class="hero container">
-    <div class="hero-container">
-      <img src="images/LOGO%20META%20ECOM%20NGANG.png" alt="Logo META ECOM - Let Vietnamese E-commerce Grow" class="hero-logo" width="317" height="72">
-      
-      <h1 class="hero-h1"><span class="hero-h1-top">SẢN XUẤT LIVESTREAM</span><span class="hero-h1-bottom">CHUYÊN NGHIỆP</span></h1>
-      
-      <p class="hero-lede">Dịch vụ sản xuất Livestream bán hàng trọn gói tại Studio 4K <strong>META ECOM</strong>. Chuyên thiết lập máy quay điện ảnh, vận hành EKIP kỹ thuật đa góc máy và tối ưu chuyển đổi trên <span style="white-space: nowrap;"><strong>TikTok Shop</strong></span>, <span style="white-space: nowrap;"><strong>Shopee Live</strong></span>, <strong>Facebook</strong>.</p>
-      
-      <div class="hero-buttons">
-        <a href="#lien-he" class="btn-pill btn-pill-primary">📞 Đăng lịch 30' chiến lược Live</a>
-        <a href="#bang-gia" class="btn-pill btn-pill-secondary">Tư vấn báo giá</a>
+  <!-- HERO SECTION (FULL WIDTH BACKGROUND) -->
+  <main class="hero">
+    <div class="container">
+      <div class="hero-container">
+        <img src="images/LOGO%20META%20ECOM%20NGANG.png" alt="Logo META ECOM - Let Vietnamese E-commerce Grow" class="hero-logo" width="317" height="72">
+        
+        <h1 class="hero-h1"><span class="hero-h1-top">SẢN XUẤT LIVESTREAM</span><span class="hero-h1-bottom">CHUYÊN NGHIỆP</span></h1>
+        
+        <p class="hero-lede">Dịch vụ sản xuất Livestream bán hàng trọn gói tại <span class="nowrap">Studio 4K</span> <span class="nowrap"><strong>META ECOM</strong></span>. Chuyên thiết lập máy quay điện ảnh, vận hành <span class="nowrap">EKIP kỹ thuật</span> <span class="nowrap">đa góc máy</span> và tối ưu chuyển đổi trên <span class="nowrap"><strong>TikTok Shop</strong></span>, <span class="nowrap"><strong>Shopee Live</strong></span>, <span class="nowrap"><strong>Facebook</strong></span>.</p>
+        
+        <div class="hero-buttons">
+          <a href="#lien-he" class="btn-pill btn-pill-primary">📞 Đăng lịch 30' chiến lược Live</a>
+          <a href="#bang-gia" class="btn-pill btn-pill-secondary">Tư vấn báo giá</a>
+        </div>
       </div>
     </div>
   </main>
