@@ -234,7 +234,8 @@
     }
 
     .section {
-      padding: 100px 0;
+      padding-top: 100px;
+      padding-bottom: 100px;
       position: relative;
     }
 
@@ -635,7 +636,7 @@
       .nav-links { display: none; }
       .contact-box { padding: 32px 24px; gap: 32px; border-radius: 28px; }
       .price-card { padding: 32px 24px; border-radius: 24px; }
-      .section { padding: 50px 0; }
+      .section { padding-top: 50px; padding-bottom: 50px; }
     }
 
     @media (max-width: 640px) {
@@ -662,9 +663,10 @@
       .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
       .btn-pill { width: 100%; text-align: center; padding: 14px 20px; font-size: 15px; }
       
-      /* ✅ FIX 2: Tăng lề ngang mobile rộng 24px giúp chữ không sát mép viền màn hình */
-      .container { padding: 0 24px !important; }
-      .section { padding: 40px 0 !important; }
+      /* Lề ngang mobile 20px. Dùng padding-left/right (KHÔNG dùng viết tắt "padding: 0 20px")
+         để không xoá padding-top của .hero / .section — đây là nguyên nhân lỗi dính header & sát lề trước đây */
+      .container { padding-left: 20px !important; padding-right: 20px !important; }
+      .section { padding-top: 40px !important; padding-bottom: 40px !important; }
       
       /* Đảm bảo văn bản trên mobile vừa vặn, không dính sát lề */
       p[style*="font-size: 17px"],
@@ -1021,7 +1023,7 @@
     }
 
     /* ===== THU GỌN KHOẢNG CÁCH GIỮA CÁC SECTION ===== */
-    body.light-mode .section { padding: 48px 0; }
+    body.light-mode .section { padding-top: 48px; padding-bottom: 48px; }
     body.light-mode #quy-trinh > div:last-child { margin-bottom: 0 !important; }
     body.light-mode .cs-header,
     body.light-mode .pf-header { margin-bottom: 32px; }
@@ -1029,10 +1031,10 @@
     body.light-mode .cs-slider-container { padding: 12px 0; }
     body.light-mode .footer { margin-top: 24px; }
     @media (max-width: 992px) {
-      body.light-mode .section { padding: 40px 0; }
+      body.light-mode .section { padding-top: 40px; padding-bottom: 40px; }
     }
     @media (max-width: 640px) {
-      body.light-mode .section { padding: 32px 0; }
+      body.light-mode .section { padding-top: 32px; padding-bottom: 32px; }
     }
 
     /* Scrollbar */
@@ -1369,7 +1371,7 @@
         .ss-quote-mark { font-size: 56px; }
         /* Màn nhỏ: mũi tên nằm đè lên ảnh đầu card */
         .ss-slider { padding: 0; }
-        .ss-section > .container { padding: 0 24px !important; }
+        .ss-section > .container { padding-left: 20px !important; padding-right: 20px !important; }
         .ss-nav { top: 120px; width: 40px; height: 40px; font-size: 16px; background: rgba(22, 14, 68, 0.7); border-color: rgba(255, 255, 255, 0.6); color: #fff; }
         .ss-prev { left: 10px; }
         .ss-next { right: 10px; }
