@@ -617,8 +617,8 @@
     @media (max-width: 992px) {
       .header { padding: 14px 20px; }
       .nav-btn { padding: 10px 18px; font-size: 12px; }
-      .hero { padding-top: 115px; }
-      .hero-container { padding: 44px 24px; border-radius: 28px; }
+      .hero { padding-top: 130px !important; }
+      .hero-container { padding: 44px 24px; border-radius: 28px; margin-top: 12px; }
       .hero-h1-top { font-size: clamp(24px, 5vw, 36px); }
       .hero-h1-bottom { font-size: clamp(40px, 9vw, 64px); }
       .hero-lede { font-size: 16px; margin-bottom: 28px; }
@@ -639,29 +639,36 @@
       .logo-icon { width: 26px; height: 26px; }
       .nav-btn { padding: 8px 14px; font-size: 11px; }
       
-      /* ✅ FIX 1: Tăng padding-top cho .hero để section 1 không bị header đè lên */
-      .hero { padding-top: 110px; padding-bottom: 32px; }
-      .hero-container { padding: 32px 20px; border-radius: 24px; margin-top: 6px; }
+      /* ✅ FIX 1: Tăng padding-top + margin-top đủ rộng để Header KHÔNG BAO GIỜ đè lên Hero section */
+      .hero { 
+        padding-top: max(145px, calc(125px + env(safe-area-inset-top, 20px))) !important; 
+        padding-bottom: 36px !important; 
+      }
+      .hero-container { 
+        padding: 32px 20px !important; 
+        border-radius: 24px !important; 
+        margin-top: 16px !important; 
+      }
       .hero-eyebrow { font-size: 12px; letter-spacing: 2px; margin-bottom: 16px; }
       .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
       .btn-pill { width: 100%; text-align: center; padding: 14px 20px; font-size: 15px; }
       
-      /* ✅ FIX 2: Tăng padding lề mobile, chữ vừa vặn không bị sát viền */
-      .container { padding: 0 20px; }
-      .section { padding: 40px 0; }
+      /* ✅ FIX 2: Tăng lề ngang mobile rộng 24px giúp chữ không sát mép viền màn hình */
+      .container { padding: 0 24px !important; }
+      .section { padding: 40px 0 !important; }
       
-      /* Điều chỉnh font chữ văn bản mobile thoáng và vừa mắt hơn */
+      /* Đảm bảo văn bản trên mobile vừa vặn, không dính sát lề */
       p[style*="font-size: 17px"],
       p[style*="font-size:17px"],
       div[style*="font-size: 17px"] {
-        font-size: 15.5px !important;
-        line-height: 1.75 !important;
+        font-size: 15px !important;
+        line-height: 1.8 !important;
       }
       
-      .contact-info h2 { font-size: 28px; }
+      .contact-info h2 { font-size: 26px; }
       .contact-box { padding: 28px 20px; }
       .price-card { padding: 28px 20px; }
-      .price-val { font-size: 38px; }
+      .price-val { font-size: 36px; }
       
       .bento-card { padding: 24px 20px; }
       .service-row { padding: 20px; gap: 12px; }
@@ -891,7 +898,7 @@
     }
     /* Mở rộng khung liên hệ sang 2 bên lề (đồng bộ với #thanh-cong, #du-an) */
     #lien-he.container { max-width: 1520px; padding-left: 32px; padding-right: 32px; }
-    @media (max-width: 992px) { #lien-he.container { padding-left: 20px; padding-right: 20px; } }
+    @media (max-width: 992px) { #lien-he.container { padding-left: 24px !important; padding-right: 24px !important; } }
     /* Chữ trên nền navy → trắng */
     body.light-mode #lien-he .contact-info,
     body.light-mode #lien-he .contact-info h2,
@@ -1353,7 +1360,7 @@
         .ss-quote-mark { font-size: 56px; }
         /* Màn nhỏ: mũi tên nằm đè lên ảnh đầu card */
         .ss-slider { padding: 0; }
-        .ss-section > .container { padding: 0 20px; }
+        .ss-section > .container { padding: 0 24px !important; }
         .ss-nav { top: 120px; width: 40px; height: 40px; font-size: 16px; background: rgba(22, 14, 68, 0.7); border-color: rgba(255, 255, 255, 0.6); color: #fff; }
         .ss-prev { left: 10px; }
         .ss-next { right: 10px; }
@@ -1556,7 +1563,7 @@
     <style>
       /* Mở rộng khung section sang 2 bên lề (đồng bộ với #thanh-cong) */
       #du-an.container { max-width: 1520px; padding-left: 32px; padding-right: 32px; }
-      @media (max-width: 992px) { #du-an.container { padding-left: 20px; padding-right: 20px; } }
+      @media (max-width: 992px) { #du-an.container { padding-left: 24px !important; padding-right: 24px !important; } }
       .pf-header { width: 100%; margin-bottom: 48px; text-align: left; }
       .pf-title { font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); font-weight: 700; color: var(--c-accent); margin-bottom: 16px; }
       .pf-subtitle { color: var(--c-text-muted); font-size: 16px; }
