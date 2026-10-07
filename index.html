@@ -1037,6 +1037,37 @@
       body.light-mode .section { padding-top: 32px; padding-bottom: 32px; }
     }
 
+    /* ===== TYPOGRAPHY: TIÊU ĐỀ & CĂN LỀ ===== */
+    /* Tiêu đề chia dòng cân đối, không để 1 chữ lẻ rơi xuống dòng dưới */
+    h1, h2, h3 { text-wrap: balance; }
+    /* Giữ cụm từ (vd: "META ECOM") luôn nằm chung 1 dòng */
+    .nowrap { white-space: nowrap; }
+
+    @media (max-width: 640px) {
+      /* Tiêu đề section gọn hơn trên điện thoại → ít bị ngắt dòng vụn */
+      h2[style*="clamp(24px, 3vw, 32px)"],
+      .ss-title,
+      .pf-title,
+      #lien-he h2 {
+        font-size: 23px !important;
+        line-height: 1.35 !important;
+      }
+      h3[style*="font-size: 24px"] {
+        font-size: 19px !important;
+        line-height: 1.4 !important;
+      }
+
+      /* Căn đều 2 bên cho các đoạn văn nội dung (trừ chú thích / đoạn căn giữa) */
+      main ~ section p:not([style*="text-align: center"]):not(.ss-subtitle):not(.price-sub):not(.vcard-info p),
+      main ~ section > div[style*="font-size: 17px"],
+      .ss-quote blockquote {
+        text-align: justify !important;
+        text-justify: inter-word;
+        -webkit-hyphens: none;
+        hyphens: none;
+      }
+    }
+
     /* Scrollbar */
     body.light-mode ::-webkit-scrollbar-track { background: #ffffff; }
     body.light-mode ::-webkit-scrollbar-thumb { background: #bbb; }
@@ -1088,14 +1119,14 @@
       <div style="border-radius: 24px; overflow: hidden; border: 1px solid var(--c-border);">
         <img src="images/anh1.png" alt="Không gian Studio Livestream META ECOM" class="img-studio-intro" style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
       </div>
-      <p style="text-align: center; color: var(--c-text-muted); font-size: 14px; margin-top: 16px; font-style: italic;">Hệ thống trang thiết bị và không gian Studio Livestream thực tế tại META ECOM.</p>
+      <p style="text-align: center; color: var(--c-text-muted); font-size: 14px; margin-top: 16px; font-style: italic;">Hệ thống trang thiết bị và không gian Studio Livestream thực tế tại <span class="nowrap">META ECOM</span>.</p>
     </div>
   </section>
 
   <!-- INTRODUCTION SECTION -->
   <section class="section container" id="gioi-thieu" style="padding-top: 24px;">
     <div style="width: 100%; margin-bottom: 48px; text-align: left;">
-      <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); margin-bottom: 24px; font-weight: 700;">Dịch Vụ Livestream Chuyên Nghiệp Tại META ECOM</h2>
+      <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); margin-bottom: 24px; font-weight: 700;">Dịch Vụ Livestream Chuyên Nghiệp Tại <span class="nowrap">META ECOM</span></h2>
       <p style="color: var(--c-text-muted); font-size: 17px; margin-bottom: 16px; line-height: 1.8;">Trong thời đại số, <strong>dịch vụ livestream</strong> đã trở thành công cụ không thể thiếu đối với doanh nghiệp, thương hiệu và cá nhân. Không chỉ là phương tiện truyền tải thông tin tức thời, livestream còn giúp tăng cường sự kết nối với khán giả, mở rộng tệp khách hàng và nâng cao hiệu quả bán hàng trực tiếp.</p>
       <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8;">META ECOM tự hào là đơn vị cung cấp <strong>dịch vụ sản xuất livestream chuyên nghiệp</strong>, đáp ứng đa dạng nhu cầu từ livestream bán hàng TikTok Shop, Shopee Live cho đến setup phòng studio trọn gói. Với kinh nghiệm hàng trăm phiên live, đội ngũ kỹ thuật viên chuyên môn cao và hệ thống thiết bị điện ảnh, chúng tôi mang đến giải pháp livestream trọn gói, chất lượng cao và tối ưu chi phí nhất.</p>
     </div>
@@ -1178,7 +1209,7 @@
   <!-- QUY TRÌNH TRIỂN KHAI 5 BƯỚC (UI BLOG / ARTICLE B2B CHUẨN THỜI TRANG) -->
   <section class="section container" id="quy-trinh">
     <div style="width: 100%; margin-bottom: 40px; text-align: left;">
-      <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); font-weight: 700; margin-bottom: 16px;">Quy Trình Triển Khai Phiên Livestream Bán Hàng Chuyên Nghiệp</h2>
+      <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); font-weight: 700; margin-bottom: 16px;">Quy Trình Triển Khai Phiên Livestream Bán Hàng <span class="nowrap">Chuyên Nghiệp</span></h2>
       <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8; text-align: left;">
         Có thể bạn chưa biết, sự khác biệt lớn nhất giữa một phiên livestream tự phát và một chiến dịch được dựng xây chuyên nghiệp như <strong>dịch vụ livestream bán hàng META ECOM</strong> nằm ở quy trình triển khai, kiểm soát rủi ro, tối ưu hóa ngân sách cùng một EKIP có năng lực thực thi nghiêm túc.
       </p>
@@ -1386,8 +1417,8 @@
     <div class="container">
       <div class="ss-head">
         <span class="ss-eyebrow">Câu chuyện thành công</span>
-        <h2 class="ss-title" id="ss-heading">Thương hiệu lớn tin chọn META ECOM</h2>
-        <p class="ss-subtitle">Kết quả thực tế từ các phiên livestream bán hàng do META ECOM sản xuất và vận hành.</p>
+        <h2 class="ss-title" id="ss-heading">Thương hiệu lớn tin chọn <span class="nowrap">META ECOM</span></h2>
+        <p class="ss-subtitle">Kết quả thực tế từ các phiên livestream bán hàng do <span class="nowrap">META ECOM</span> sản xuất và vận hành.</p>
       </div>
 
       <div class="ss-slider" aria-roledescription="carousel" aria-label="Câu chuyện khách hàng">
