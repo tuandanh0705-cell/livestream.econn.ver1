@@ -124,6 +124,9 @@
       box-sizing: border-box;
     }
 
+    /* Khi bấm menu neo (#dich-vu, #bang-gia...) chừa chỗ cho header sticky */
+    html { scroll-padding-top: 90px; }
+
     body {
       font-family: var(--font-body);
       background-color: var(--c-bg);
@@ -149,7 +152,9 @@
       justify-content: space-between;
       align-items: center;
       padding: 16px 48px;
-      position: fixed;
+      /* TÁCH HẲN header khỏi Section 1: sticky chiếm chỗ riêng trong luồng trang, không đè lên nội dung */
+      position: -webkit-sticky;
+      position: sticky;
       width: 100%;
       top: 0;
       left: 0;
@@ -264,7 +269,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: 130px; /* Offset nav */
+      padding-top: 48px; /* Header đã sticky, không cần bù chiều cao nữa */
       padding-bottom: 24px;
     }
 
@@ -617,8 +622,8 @@
     @media (max-width: 992px) {
       .header { padding: 14px 20px; }
       .nav-btn { padding: 10px 18px; font-size: 12px; }
-      .hero { padding-top: 130px !important; }
-      .hero-container { padding: 44px 24px; border-radius: 28px; margin-top: 12px; }
+      .hero { padding-top: 32px !important; }
+      .hero-container { padding: 44px 24px; border-radius: 28px; margin-top: 0; }
       .hero-h1-top { font-size: clamp(24px, 5vw, 36px); }
       .hero-h1-bottom { font-size: clamp(40px, 9vw, 64px); }
       .hero-lede { font-size: 16px; margin-bottom: 28px; }
@@ -639,15 +644,15 @@
       .logo-icon { width: 26px; height: 26px; }
       .nav-btn { padding: 8px 14px; font-size: 11px; }
       
-      /* ✅ CROSS-BROWSER FIX: Dùng padding-top tiêu chuẩn 160px tương thích 100% mọi trình duyệt mobile (Zalo Webview, Safari, Chrome) */
+      /* Header đã sticky (tách khỏi luồng đè) → Section 1 chỉ cần khoảng cách nhỏ phía trên */
       .hero { 
-        padding-top: 160px !important; 
-        padding-bottom: 36px !important; 
+        padding-top: 24px !important; 
+        padding-bottom: 32px !important; 
       }
       .hero-container { 
-        padding: 48px 20px 32px 20px !important; 
+        padding: 32px 20px !important; 
         border-radius: 24px !important; 
-        margin-top: 20px !important; 
+        margin-top: 0 !important; 
       }
       .hero-logo {
         height: 40px !important;
