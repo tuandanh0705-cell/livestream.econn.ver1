@@ -278,16 +278,16 @@
     }
 
     .hero-container {
-      border: 1px solid var(--c-border);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
       border-radius: 36px;
       padding: 72px 56px;
       text-align: center;
       max-width: 1140px;
       width: 100%;
-      background: var(--c-glass);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      box-shadow: none;
     }
 
     .hero-eyebrow {
@@ -796,18 +796,19 @@
       .logo-icon-img { height: 30px; }
     }
 
-    /* Full-width Section 1 background với ảnh ẢNH MỜ SECTION 1.jpg chìm trên TOÀN BỘ diện tích Section 1 */
+    /* Section 1: Bỏ ô trắng, chỉ giữ viền bo góc glassmorphism để ảnh mờ chìm phủ xuyên suốt toàn bộ Section 1 */
     body.light-mode .hero {
       background: linear-gradient(180deg, rgba(22, 14, 68, 0.85) 0%, rgba(22, 14, 68, 0.92) 100%), 
                   url('images/%E1%BA%A2NH%20M%E1%BB%9D%20SECTION%201.jpg') center/cover no-repeat;
     }
     body.light-mode .hero-container {
-      background: rgba(255, 255, 255, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-      color: #000000;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.96) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3), 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+      color: #111111 !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      border-radius: 36px !important;
     }
     /* Logo ngang trong khung Hero */
     .hero-logo {
@@ -818,27 +819,35 @@
       object-fit: contain;
       margin: 0 auto 32px;
     }
+    body.light-mode .hero-logo {
+      filter: none !important;
+    }
     @media (max-width: 640px) {
       .hero-logo { height: 44px; margin-bottom: 20px; }
     }
-    body.light-mode .hero-h1-top { color: rgba(17, 17, 17, 0.95) !important; }
+    body.light-mode .hero-h1-top { color: #160E44 !important; font-weight: 700 !important; }
     body.light-mode .hero-h1-bottom {
-      background: linear-gradient(180deg, #111111 20%, rgba(40, 40, 40, 0.85) 100%) !important;
+      background: linear-gradient(180deg, #160E44 0%, #0D082B 100%) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
-      filter: drop-shadow(0 4px 12px rgba(200, 148, 14, 0.2)) !important;
+      filter: drop-shadow(0 2px 8px rgba(22, 14, 68, 0.15)) !important;
+      color: #160E44 !important;
     }
-    body.light-mode .hero-lede { color: #4b4b5c !important; }
+    body.light-mode .hero-lede { color: #2c2c38 !important; }
+    body.light-mode .hero-lede strong,
+    body.light-mode .hero-lede span.nowrap strong { color: #F7941D !important; font-weight: 700 !important; }
     body.light-mode .btn-pill-secondary {
-      background: #ffffff;
-      border-color: rgba(0,0,0,0.18);
-      color: #111111;
+      background: #160E44 !important;
+      border-color: #160E44 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 15px rgba(22, 14, 68, 0.2) !important;
     }
     body.light-mode .btn-pill-secondary:hover {
-      background: #fafafa;
-      border-color: var(--c-accent);
-      color: #111111;
+      background: #251a66 !important;
+      border-color: #251a66 !important;
+      color: #ffffff !important;
     }
+
     body.light-mode .partner-logos { opacity: 0.35; filter: invert(1); }
 
     /* Cards & Sections */
@@ -969,10 +978,7 @@
       border-color: transparent transparent transparent #ffffff;
     }
 
-    body.light-mode .hero-eyebrow,
     body.light-mode .section-eyebrow,
-    body.light-mode .hero-h1-top,
-    body.light-mode .hero-lede,
     body.light-mode .srv-num,
     body.light-mode .price-val span,
     body.light-mode .feature-list li,
@@ -1009,12 +1015,6 @@
     body.light-mode .price-title {
       text-transform: uppercase;
       letter-spacing: 0.5px;
-    }
-    body.light-mode .hero-h1-bottom {
-      background: none;
-      -webkit-text-fill-color: #000000;
-      color: #000000;
-      filter: none;
     }
 
     /* Bảng dịch vụ: header navy chữ trắng, highlight cam */
@@ -1124,7 +1124,7 @@
         
         <h1 class="hero-h1"><span class="hero-h1-top">SẢN XUẤT LIVESTREAM</span><span class="hero-h1-bottom">CHUYÊN NGHIỆP</span></h1>
         
-        <p class="hero-lede">Dịch vụ sản xuất Livestream bán hàng trọn gói tại <span class="nowrap">Studio 4K</span> <span class="nowrap"><strong>META ECOM</strong></span>. Chuyên thiết lập máy quay điện ảnh, vận hành <span class="nowrap">EKIP kỹ thuật</span> <span class="nowrap">đa góc máy</span> và tối ưu chuyển đổi trên <span class="nowrap"><strong>TikTok Shop</strong></span>, <span class="nowrap"><strong>Shopee Live</strong></span>, <span class="nowrap"><strong>Facebook</strong></span>.</p>
+        <p class="hero-lede">Dịch vụ sản xuất <span class="nowrap">Livestream bán hàng</span> trọn gói tại <span class="nowrap">Studio 4K</span> <span class="nowrap"><strong>META ECOM</strong></span>. Chuyên thiết lập <span class="nowrap">máy quay</span> <span class="nowrap">điện ảnh</span>, vận hành <span class="nowrap">EKIP kỹ thuật</span> <span class="nowrap">đa góc máy</span> và <span class="nowrap">tối ưu chuyển đổi</span> trên <span class="nowrap"><strong>TikTok Shop</strong></span>, <span class="nowrap"><strong>Shopee Live</strong></span>, <span class="nowrap"><strong>Facebook</strong></span>.</p>
         
         <div class="hero-buttons">
           <a href="#lien-he" class="btn-pill btn-pill-primary">📞 Đăng lịch 30' chiến lược Live</a>
@@ -1137,7 +1137,7 @@
   <!-- INTRO LEAD-IN & ANH 1 SECTION -->
   <section class="container" style="padding-top: 16px; padding-bottom: 20px;">
     <div style="width: 100%; text-align: left; font-size: 17px; line-height: 1.8; color: var(--c-text-muted); margin-bottom: 20px;">
-      Trong kỷ nguyên thương mại điện tử (E-commerce), <strong>dịch vụ sản xuất Livestream bán hàng trọn gói</strong> là chiến lược ưu tiên hàng đầu giúp các doanh nghiệp bứt phá doanh số. Việc đầu tư vào một giải pháp Livestream chuyên nghiệp, chuẩn hình ảnh 4K chính là “chìa khóa vàng” để nhãn hàng tạo nên các phiên <strong>Mega Live bùng nổ đơn hàng</strong> trên <span style="white-space: nowrap;">TikTok Shop</span>, <span style="white-space: nowrap;">Shopee Live</span> và Facebook. Hãy cùng <strong>META ECOM</strong> khám phá giải pháp tối ưu cho thương hiệu của bạn ngay dưới đây!
+      Trong kỷ nguyên <span class="nowrap">thương mại điện tử</span> <span class="nowrap">(E-commerce)</span>, <strong>dịch vụ sản xuất <span class="nowrap">Livestream bán hàng</span> trọn gói</strong> là chiến lược ưu tiên hàng đầu giúp các doanh nghiệp <span class="nowrap">bứt phá doanh số</span>. Việc đầu tư vào một giải pháp Livestream <span class="nowrap">chuyên nghiệp</span>, <span class="nowrap">chuẩn hình ảnh 4K</span> chính là “chìa khóa vàng” để nhãn hàng tạo nên các phiên <strong><span class="nowrap">Mega Live</span> <span class="nowrap">bùng nổ đơn hàng</span></strong> trên <span class="nowrap">TikTok Shop</span>, <span class="nowrap">Shopee Live</span> và <span class="nowrap">Facebook</span>. Hãy cùng <strong><span class="nowrap">META ECOM</span></strong> khám phá giải pháp tối ưu cho thương hiệu của bạn ngay dưới đây!
     </div>
 
     <!-- ẢNH 1.PNG THỰC TẾ CHÈN NGAY DƯỚI NỘI DUNG NÀY -->
@@ -1153,8 +1153,8 @@
   <section class="section container" id="gioi-thieu" style="padding-top: 24px;">
     <div style="width: 100%; margin-bottom: 48px; text-align: left;">
       <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); margin-bottom: 24px; font-weight: 700;">Dịch Vụ Livestream Chuyên Nghiệp Tại <span class="nowrap">META ECOM</span></h2>
-      <p style="color: var(--c-text-muted); font-size: 17px; margin-bottom: 16px; line-height: 1.8;">Trong thời đại số, <strong>dịch vụ livestream</strong> đã trở thành công cụ không thể thiếu đối với doanh nghiệp, thương hiệu và cá nhân. Không chỉ là phương tiện truyền tải thông tin tức thời, livestream còn giúp tăng cường sự kết nối với khán giả, mở rộng tệp khách hàng và nâng cao hiệu quả bán hàng trực tiếp.</p>
-      <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8;">META ECOM tự hào là đơn vị cung cấp <strong>dịch vụ sản xuất livestream chuyên nghiệp</strong>, đáp ứng đa dạng nhu cầu từ livestream bán hàng TikTok Shop, Shopee Live cho đến setup phòng studio trọn gói. Với kinh nghiệm hàng trăm phiên live, đội ngũ kỹ thuật viên chuyên môn cao và hệ thống thiết bị điện ảnh, chúng tôi mang đến giải pháp livestream trọn gói, chất lượng cao và tối ưu chi phí nhất.</p>
+      <p style="color: var(--c-text-muted); font-size: 17px; margin-bottom: 16px; line-height: 1.8;">Trong thời đại số, <strong>dịch vụ livestream</strong> đã trở thành công cụ không thể thiếu đối với doanh nghiệp, thương hiệu và cá nhân. Không chỉ là phương tiện truyền tải thông tin tức thời, livestream còn giúp tăng cường sự kết nối với khán giả, mở rộng tệp khách hàng và nâng cao hiệu quả <span class="nowrap">bán hàng trực tiếp</span>.</p>
+      <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8;"><span class="nowrap">META ECOM</span> tự hào là đơn vị cung cấp <strong>dịch vụ sản xuất <span class="nowrap">livestream chuyên nghiệp</span></strong>, đáp ứng đa dạng nhu cầu từ livestream bán hàng <span class="nowrap">TikTok Shop</span>, <span class="nowrap">Shopee Live</span> cho đến setup <span class="nowrap">phòng studio</span> trọn gói. Với kinh nghiệm hàng trăm phiên live, đội ngũ <span class="nowrap">kỹ thuật viên</span> chuyên môn cao và hệ thống <span class="nowrap">thiết bị điện ảnh</span>, chúng tôi mang đến giải pháp livestream trọn gói, chất lượng cao và <span class="nowrap">tối ưu chi phí</span> nhất.</p>
     </div>
     
     <div style="width: 100%; max-width: 900px; margin: 0 auto;">
@@ -1237,10 +1237,10 @@
     <div style="width: 100%; margin-bottom: 40px; text-align: left;">
       <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); color: var(--c-accent); font-weight: 700; margin-bottom: 16px;">Quy Trình Triển Khai Phiên Livestream Bán Hàng <span class="nowrap">Chuyên Nghiệp</span></h2>
       <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8; text-align: left;">
-        Có thể bạn chưa biết, sự khác biệt lớn nhất giữa một phiên livestream tự phát và một chiến dịch được dựng xây chuyên nghiệp như <strong>dịch vụ livestream bán hàng META ECOM</strong> nằm ở quy trình triển khai, kiểm soát rủi ro, tối ưu hóa ngân sách cùng một EKIP có năng lực thực thi nghiêm túc.
+        Có thể bạn chưa biết, sự khác biệt lớn nhất giữa một phiên livestream tự phát và một chiến dịch được dựng xây chuyên nghiệp như <strong>dịch vụ livestream bán hàng <span class="nowrap">META ECOM</span></strong> nằm ở quy trình triển khai, kiểm soát rủi ro, tối ưu hóa ngân sách cùng một <span class="nowrap">EKIP</span> có năng lực thực thi nghiêm túc.
       </p>
       <p style="color: var(--c-text-muted); font-size: 17px; line-height: 1.8; margin-top: 16px; text-align: left;">
-        Tại <strong>META ECOM</strong>, chúng tôi áp dụng quy trình chuẩn hóa với 5 bước nghiêm ngặt, đảm bảo thời gian của doanh nghiệp đầu tư cho phiên live thành giá trị thương hiệu uy tín và chuyển đổi thực tế, cụ thể như sau:
+        Tại <strong><span class="nowrap">META ECOM</span></strong>, chúng tôi áp dụng quy trình chuẩn hóa với 5 bước nghiêm ngặt, đảm bảo thời gian của doanh nghiệp đầu tư cho phiên live thành giá trị thương hiệu uy tín và <span class="nowrap">chuyển đổi thực tế</span>, cụ thể như sau:
       </p>
     </div>
 
@@ -1975,7 +1975,7 @@
     <div class="contact-box">
       <div class="contact-info">
         <h2>Bắt đầu chiến dịch Live tiếp theo.</h2>
-        <p style="color: var(--c-text-muted); font-size: 18px; margin-bottom: 48px;">Đội ngũ chuyên gia từ META ECOM sẽ liên hệ lại với bạn trong vòng 30 phút làm việc.</p>
+        <p style="color: var(--c-text-muted); font-size: 18px; margin-bottom: 48px;">Đội ngũ chuyên gia từ <span class="nowrap"><strong>META ECOM</strong></span> sẽ liên hệ lại với bạn trong vòng 30 phút làm việc.</p>
         
         <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--c-accent); margin-bottom: 8px; font-weight: 700;">Hotline Trực Tiếp 24/7</div>
         <div style="font-family: var(--font-display); font-size: clamp(32px, 3vw, 40px); font-weight: 900;">092 999 66 99</div>
